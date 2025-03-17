@@ -1,0 +1,9 @@
+[1m/home/qeftser/vip/vectornav/src/vectornav-ros2/vectornav/vnproglib-1.2.0.0/cpp/src/rtcmlistener.cpp:268:26: [0m[0;1;35mwarning: [0m[1mformat specifies type 'unsigned char' but the argument has type 'int' [-Wformat][0m
+                                printf("0x%02hhx, ", buffer[i] & 0xFF);
+[0;1;32m                                          ~~~~~~     ^~~~~~~~~~~~~~~~
+[0m[0;32m                                          %02x
+[0m1 warning generated.
+[1m/home/qeftser/vip/vectornav/src/vectornav-ros2/vectornav/vnproglib-1.2.0.0/cpp/src/sensors.cpp:3508:11: [0m[0;1;35mwarning: [0m[1menumeration values 'VNPROCESSOR_NAV' and 'VNPROCESSOR_IMU' not handled in switch [-Wswitch][0m
+                switch (processor)
+[0;1;32m                        ^~~~~~~~~
+[0m1 warning generated.

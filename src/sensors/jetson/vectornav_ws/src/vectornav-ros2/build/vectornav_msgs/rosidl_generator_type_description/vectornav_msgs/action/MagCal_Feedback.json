@@ -1,0 +1,46 @@
+{
+  "type_description_msg": {
+    "type_description": {
+      "type_name": "vectornav_msgs/action/MagCal_Feedback",
+      "fields": [
+        {
+          "name": "curr_avg_dev",
+          "type": {
+            "type_id": 58,
+            "capacity": 12,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "curr_calib",
+          "type": {
+            "type_id": 58,
+            "capacity": 12,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        },
+        {
+          "name": "samples",
+          "type": {
+            "type_id": 7,
+            "capacity": 0,
+            "string_capacity": 0,
+            "nested_type_name": ""
+          },
+          "default_value": ""
+        }
+      ]
+    },
+    "referenced_type_descriptions": []
+  },
+  "type_hashes": [
+    {
+      "type_name": "vectornav_msgs/action/MagCal_Feedback",
+      "hash_string": "RIHS01_dc9cdeff8b6cf59d577d836e945f12c6252f617d3eb5ef0efe1175d2aadab8c6"
+    }
+  ]
+}

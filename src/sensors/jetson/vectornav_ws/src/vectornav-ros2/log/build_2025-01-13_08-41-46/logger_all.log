@@ -1,0 +1,218 @@
+[0.056s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.056s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7a48cb6428c0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7a48cb6422f0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7a48cb6422f0>>, mixin_verb=('build',))
+[0.138s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.138s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.138s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.138s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.138s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.138s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.138s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/qeftser/vip/vectornav/src/vectornav-ros2'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.138s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.144s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(vectornav) by extensions ['ignore', 'ignore_ament_install']
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(vectornav) by extension 'ignore'
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(vectornav) by extension 'ignore_ament_install'
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(vectornav) by extensions ['colcon_pkg']
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(vectornav) by extension 'colcon_pkg'
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(vectornav) by extensions ['colcon_meta']
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(vectornav) by extension 'colcon_meta'
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(vectornav) by extensions ['ros']
+[0.145s] Level 1:colcon.colcon_core.package_identification:_identify(vectornav) by extension 'ros'
+[0.147s] DEBUG:colcon.colcon_core.package_identification:Package 'vectornav' with type 'ros.ament_cmake' and name 'vectornav'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(vectornav_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(vectornav_msgs) by extension 'ignore'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(vectornav_msgs) by extension 'ignore_ament_install'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(vectornav_msgs) by extensions ['colcon_pkg']
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(vectornav_msgs) by extension 'colcon_pkg'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(vectornav_msgs) by extensions ['colcon_meta']
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(vectornav_msgs) by extension 'colcon_meta'
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(vectornav_msgs) by extensions ['ros']
+[0.149s] Level 1:colcon.colcon_core.package_identification:_identify(vectornav_msgs) by extension 'ros'
+[0.150s] DEBUG:colcon.colcon_core.package_identification:Package 'vectornav_msgs' with type 'ros.ament_cmake' and name 'vectornav_msgs'
+[0.150s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.150s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.150s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.150s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.150s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.170s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.170s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.171s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 355 installed packages in /opt/ros/iron
+[0.172s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.195s] Level 5:colcon.colcon_core.verb:set package 'vectornav_msgs' build argument 'cmake_args' from command line to 'None'
+[0.195s] Level 5:colcon.colcon_core.verb:set package 'vectornav_msgs' build argument 'cmake_target' from command line to 'None'
+[0.195s] Level 5:colcon.colcon_core.verb:set package 'vectornav_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.195s] Level 5:colcon.colcon_core.verb:set package 'vectornav_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.195s] Level 5:colcon.colcon_core.verb:set package 'vectornav_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.195s] Level 5:colcon.colcon_core.verb:set package 'vectornav_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.195s] Level 5:colcon.colcon_core.verb:set package 'vectornav_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.195s] Level 5:colcon.colcon_core.verb:set package 'vectornav_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.195s] Level 5:colcon.colcon_core.verb:set package 'vectornav_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.195s] DEBUG:colcon.colcon_core.verb:Building package 'vectornav_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/qeftser/vip/vectornav/src/vectornav-ros2/build/vectornav_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs', 'merge_install': False, 'path': '/home/qeftser/vip/vectornav/src/vectornav-ros2/vectornav_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.195s] Level 5:colcon.colcon_core.verb:set package 'vectornav' build argument 'cmake_args' from command line to 'None'
+[0.195s] Level 5:colcon.colcon_core.verb:set package 'vectornav' build argument 'cmake_target' from command line to 'None'
+[0.195s] Level 5:colcon.colcon_core.verb:set package 'vectornav' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.195s] Level 5:colcon.colcon_core.verb:set package 'vectornav' build argument 'cmake_clean_cache' from command line to 'False'
+[0.195s] Level 5:colcon.colcon_core.verb:set package 'vectornav' build argument 'cmake_clean_first' from command line to 'False'
+[0.195s] Level 5:colcon.colcon_core.verb:set package 'vectornav' build argument 'cmake_force_configure' from command line to 'False'
+[0.195s] Level 5:colcon.colcon_core.verb:set package 'vectornav' build argument 'ament_cmake_args' from command line to 'None'
+[0.195s] Level 5:colcon.colcon_core.verb:set package 'vectornav' build argument 'catkin_cmake_args' from command line to 'None'
+[0.195s] Level 5:colcon.colcon_core.verb:set package 'vectornav' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.195s] DEBUG:colcon.colcon_core.verb:Building package 'vectornav' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/qeftser/vip/vectornav/src/vectornav-ros2/build/vectornav', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav', 'merge_install': False, 'path': '/home/qeftser/vip/vectornav/src/vectornav-ros2/vectornav', 'symlink_install': False, 'test_result_base': None}
+[0.196s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.196s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.197s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/qeftser/vip/vectornav/src/vectornav-ros2/vectornav_msgs' with build type 'ament_cmake'
+[0.197s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/qeftser/vip/vectornav/src/vectornav-ros2/vectornav_msgs'
+[0.198s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.198s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.198s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.203s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/qeftser/vip/vectornav/src/vectornav-ros2/build/vectornav_msgs': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake /home/qeftser/vip/vectornav/src/vectornav-ros2/vectornav_msgs -DCMAKE_INSTALL_PREFIX=/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs
+[1.776s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/qeftser/vip/vectornav/src/vectornav-ros2/build/vectornav_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake /home/qeftser/vip/vectornav/src/vectornav-ros2/vectornav_msgs -DCMAKE_INSTALL_PREFIX=/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs
+[1.777s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/qeftser/vip/vectornav/src/vectornav-ros2/build/vectornav_msgs': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake --build /home/qeftser/vip/vectornav/src/vectornav-ros2/build/vectornav_msgs -- -j8 -l8
+[11.502s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/qeftser/vip/vectornav/src/vectornav-ros2/build/vectornav_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake --build /home/qeftser/vip/vectornav/src/vectornav-ros2/build/vectornav_msgs -- -j8 -l8
+[11.511s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/qeftser/vip/vectornav/src/vectornav-ros2/build/vectornav_msgs': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake --install /home/qeftser/vip/vectornav/src/vectornav-ros2/build/vectornav_msgs
+[11.581s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(vectornav_msgs)
+[11.581s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/qeftser/vip/vectornav/src/vectornav-ros2/build/vectornav_msgs' returned '0': CMAKE_PREFIX_PATH=/opt/ros/iron /usr/bin/cmake --install /home/qeftser/vip/vectornav/src/vectornav-ros2/build/vectornav_msgs
+[11.582s] Level 1:colcon.colcon_core.environment:checking '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs' for CMake module files
+[11.583s] Level 1:colcon.colcon_core.environment:checking '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs' for CMake config files
+[11.583s] Level 1:colcon.colcon_core.shell:create_environment_hook('vectornav_msgs', 'cmake_prefix_path')
+[11.583s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs/share/vectornav_msgs/hook/cmake_prefix_path.ps1'
+[11.584s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs/share/vectornav_msgs/hook/cmake_prefix_path.dsv'
+[11.584s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs/share/vectornav_msgs/hook/cmake_prefix_path.sh'
+[11.585s] Level 1:colcon.colcon_core.environment:checking '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs/lib'
+[11.585s] Level 1:colcon.colcon_core.shell:create_environment_hook('vectornav_msgs', 'ld_library_path_lib')
+[11.585s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs/share/vectornav_msgs/hook/ld_library_path_lib.ps1'
+[11.585s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs/share/vectornav_msgs/hook/ld_library_path_lib.dsv'
+[11.585s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs/share/vectornav_msgs/hook/ld_library_path_lib.sh'
+[11.586s] Level 1:colcon.colcon_core.environment:checking '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs/bin'
+[11.586s] Level 1:colcon.colcon_core.environment:checking '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs/lib/pkgconfig/vectornav_msgs.pc'
+[11.586s] Level 1:colcon.colcon_core.environment:checking '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs/lib/python3.10/site-packages'
+[11.586s] Level 1:colcon.colcon_core.shell:create_environment_hook('vectornav_msgs', 'pythonpath')
+[11.586s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs/share/vectornav_msgs/hook/pythonpath.ps1'
+[11.586s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs/share/vectornav_msgs/hook/pythonpath.dsv'
+[11.586s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs/share/vectornav_msgs/hook/pythonpath.sh'
+[11.586s] Level 1:colcon.colcon_core.environment:checking '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs/bin'
+[11.587s] INFO:colcon.colcon_core.shell:Creating package script '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs/share/vectornav_msgs/package.ps1'
+[11.587s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs/share/vectornav_msgs/package.dsv'
+[11.587s] INFO:colcon.colcon_core.shell:Creating package script '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs/share/vectornav_msgs/package.sh'
+[11.588s] INFO:colcon.colcon_core.shell:Creating package script '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs/share/vectornav_msgs/package.bash'
+[11.588s] INFO:colcon.colcon_core.shell:Creating package script '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs/share/vectornav_msgs/package.zsh'
+[11.588s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs/share/colcon-core/packages/vectornav_msgs)
+[11.588s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(vectornav_msgs)
+[11.589s] Level 1:colcon.colcon_core.environment:checking '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs' for CMake module files
+[11.589s] Level 1:colcon.colcon_core.environment:checking '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs' for CMake config files
+[11.589s] Level 1:colcon.colcon_core.shell:create_environment_hook('vectornav_msgs', 'cmake_prefix_path')
+[11.589s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs/share/vectornav_msgs/hook/cmake_prefix_path.ps1'
+[11.589s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs/share/vectornav_msgs/hook/cmake_prefix_path.dsv'
+[11.589s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs/share/vectornav_msgs/hook/cmake_prefix_path.sh'
+[11.590s] Level 1:colcon.colcon_core.environment:checking '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs/lib'
+[11.590s] Level 1:colcon.colcon_core.shell:create_environment_hook('vectornav_msgs', 'ld_library_path_lib')
+[11.590s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs/share/vectornav_msgs/hook/ld_library_path_lib.ps1'
+[11.590s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs/share/vectornav_msgs/hook/ld_library_path_lib.dsv'
+[11.590s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs/share/vectornav_msgs/hook/ld_library_path_lib.sh'
+[11.590s] Level 1:colcon.colcon_core.environment:checking '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs/bin'
+[11.590s] Level 1:colcon.colcon_core.environment:checking '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs/lib/pkgconfig/vectornav_msgs.pc'
+[11.591s] Level 1:colcon.colcon_core.environment:checking '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs/lib/python3.10/site-packages'
+[11.591s] Level 1:colcon.colcon_core.shell:create_environment_hook('vectornav_msgs', 'pythonpath')
+[11.591s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs/share/vectornav_msgs/hook/pythonpath.ps1'
+[11.591s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs/share/vectornav_msgs/hook/pythonpath.dsv'
+[11.591s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs/share/vectornav_msgs/hook/pythonpath.sh'
+[11.591s] Level 1:colcon.colcon_core.environment:checking '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs/bin'
+[11.591s] INFO:colcon.colcon_core.shell:Creating package script '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs/share/vectornav_msgs/package.ps1'
+[11.592s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs/share/vectornav_msgs/package.dsv'
+[11.592s] INFO:colcon.colcon_core.shell:Creating package script '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs/share/vectornav_msgs/package.sh'
+[11.592s] INFO:colcon.colcon_core.shell:Creating package script '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs/share/vectornav_msgs/package.bash'
+[11.592s] INFO:colcon.colcon_core.shell:Creating package script '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs/share/vectornav_msgs/package.zsh'
+[11.592s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs/share/colcon-core/packages/vectornav_msgs)
+[11.593s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/qeftser/vip/vectornav/src/vectornav-ros2/vectornav' with build type 'ament_cmake'
+[11.593s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/qeftser/vip/vectornav/src/vectornav-ros2/vectornav'
+[11.593s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[11.593s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[11.599s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/qeftser/vip/vectornav/src/vectornav-ros2/build/vectornav': AMENT_PREFIX_PATH=/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs:/opt/ros/iron LD_LIBRARY_PATH=/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake /home/qeftser/vip/vectornav/src/vectornav-ros2/vectornav -DCMAKE_INSTALL_PREFIX=/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav
+[13.069s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/qeftser/vip/vectornav/src/vectornav-ros2/build/vectornav' returned '0': AMENT_PREFIX_PATH=/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs:/opt/ros/iron LD_LIBRARY_PATH=/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake /home/qeftser/vip/vectornav/src/vectornav-ros2/vectornav -DCMAKE_INSTALL_PREFIX=/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav
+[13.069s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/qeftser/vip/vectornav/src/vectornav-ros2/build/vectornav': AMENT_PREFIX_PATH=/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs:/opt/ros/iron LD_LIBRARY_PATH=/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/qeftser/vip/vectornav/src/vectornav-ros2/build/vectornav -- -j8 -l8
+[22.775s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/qeftser/vip/vectornav/src/vectornav-ros2/build/vectornav' returned '0': AMENT_PREFIX_PATH=/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs:/opt/ros/iron LD_LIBRARY_PATH=/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/qeftser/vip/vectornav/src/vectornav-ros2/build/vectornav -- -j8 -l8
+[22.777s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/qeftser/vip/vectornav/src/vectornav-ros2/build/vectornav': AMENT_PREFIX_PATH=/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs:/opt/ros/iron LD_LIBRARY_PATH=/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/qeftser/vip/vectornav/src/vectornav-ros2/build/vectornav
+[22.801s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(vectornav)
+[22.802s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/qeftser/vip/vectornav/src/vectornav-ros2/build/vectornav' returned '0': AMENT_PREFIX_PATH=/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs:/opt/ros/iron LD_LIBRARY_PATH=/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav_msgs/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/qeftser/vip/vectornav/src/vectornav-ros2/build/vectornav
+[22.802s] Level 1:colcon.colcon_core.environment:checking '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav' for CMake module files
+[22.802s] Level 1:colcon.colcon_core.environment:checking '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav' for CMake config files
+[22.802s] Level 1:colcon.colcon_core.shell:create_environment_hook('vectornav', 'cmake_prefix_path')
+[22.802s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav/share/vectornav/hook/cmake_prefix_path.ps1'
+[22.803s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav/share/vectornav/hook/cmake_prefix_path.dsv'
+[22.803s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav/share/vectornav/hook/cmake_prefix_path.sh'
+[22.803s] Level 1:colcon.colcon_core.environment:checking '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav/lib'
+[22.803s] Level 1:colcon.colcon_core.shell:create_environment_hook('vectornav', 'ld_library_path_lib')
+[22.803s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav/share/vectornav/hook/ld_library_path_lib.ps1'
+[22.803s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav/share/vectornav/hook/ld_library_path_lib.dsv'
+[22.804s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav/share/vectornav/hook/ld_library_path_lib.sh'
+[22.804s] Level 1:colcon.colcon_core.environment:checking '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav/bin'
+[22.804s] Level 1:colcon.colcon_core.environment:checking '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav/lib/pkgconfig/vectornav.pc'
+[22.804s] Level 1:colcon.colcon_core.environment:checking '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav/lib/python3.10/site-packages'
+[22.804s] Level 1:colcon.colcon_core.environment:checking '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav/bin'
+[22.804s] INFO:colcon.colcon_core.shell:Creating package script '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav/share/vectornav/package.ps1'
+[22.804s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav/share/vectornav/package.dsv'
+[22.805s] INFO:colcon.colcon_core.shell:Creating package script '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav/share/vectornav/package.sh'
+[22.805s] INFO:colcon.colcon_core.shell:Creating package script '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav/share/vectornav/package.bash'
+[22.805s] INFO:colcon.colcon_core.shell:Creating package script '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav/share/vectornav/package.zsh'
+[22.805s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav/share/colcon-core/packages/vectornav)
+[22.805s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(vectornav)
+[22.806s] Level 1:colcon.colcon_core.environment:checking '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav' for CMake module files
+[22.806s] Level 1:colcon.colcon_core.environment:checking '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav' for CMake config files
+[22.806s] Level 1:colcon.colcon_core.shell:create_environment_hook('vectornav', 'cmake_prefix_path')
+[22.806s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav/share/vectornav/hook/cmake_prefix_path.ps1'
+[22.807s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav/share/vectornav/hook/cmake_prefix_path.dsv'
+[22.807s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav/share/vectornav/hook/cmake_prefix_path.sh'
+[22.807s] Level 1:colcon.colcon_core.environment:checking '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav/lib'
+[22.807s] Level 1:colcon.colcon_core.shell:create_environment_hook('vectornav', 'ld_library_path_lib')
+[22.807s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav/share/vectornav/hook/ld_library_path_lib.ps1'
+[22.808s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav/share/vectornav/hook/ld_library_path_lib.dsv'
+[22.808s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav/share/vectornav/hook/ld_library_path_lib.sh'
+[22.808s] Level 1:colcon.colcon_core.environment:checking '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav/bin'
+[22.808s] Level 1:colcon.colcon_core.environment:checking '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav/lib/pkgconfig/vectornav.pc'
+[22.808s] Level 1:colcon.colcon_core.environment:checking '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav/lib/python3.10/site-packages'
+[22.808s] Level 1:colcon.colcon_core.environment:checking '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav/bin'
+[22.808s] INFO:colcon.colcon_core.shell:Creating package script '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav/share/vectornav/package.ps1'
+[22.809s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav/share/vectornav/package.dsv'
+[22.809s] INFO:colcon.colcon_core.shell:Creating package script '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav/share/vectornav/package.sh'
+[22.809s] INFO:colcon.colcon_core.shell:Creating package script '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav/share/vectornav/package.bash'
+[22.809s] INFO:colcon.colcon_core.shell:Creating package script '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav/share/vectornav/package.zsh'
+[22.809s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/qeftser/vip/vectornav/src/vectornav-ros2/install/vectornav/share/colcon-core/packages/vectornav)
+[22.810s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[22.810s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[22.810s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[22.810s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[22.813s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[22.813s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[22.813s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[22.815s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[22.815s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/local_setup.ps1'
+[22.816s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/_local_setup_util_ps1.py'
+[22.816s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/setup.ps1'
+[22.817s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/local_setup.sh'
+[22.817s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/_local_setup_util_sh.py'
+[22.817s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/setup.sh'
+[22.818s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/local_setup.bash'
+[22.818s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/setup.bash'
+[22.818s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/local_setup.zsh'
+[22.819s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/qeftser/vip/vectornav/src/vectornav-ros2/install/setup.zsh'
