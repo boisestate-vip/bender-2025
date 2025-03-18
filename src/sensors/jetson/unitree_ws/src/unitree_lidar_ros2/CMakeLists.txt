@@ -25,12 +25,12 @@ find_package(PCL REQUIRED)
 include_directories(
   ${PCL_INCLUDE_DIRS} 
   include
-  ../../../unitree_lidar_sdk/include
+  $ENV{BENDER_DEPENDENCIES_DIR}/unitree_lidar_sdk/include
 )
 
 link_directories(
   ${PCL_LIBRARY_DIRS}
-  ../../../unitree_lidar_sdk/lib/${CMAKE_SYSTEM_PROCESSOR}
+  $ENV{BENDER_DEPENDENCIES_DIR}/unitree_lidar_sdk/lib/${CMAKE_SYSTEM_PROCESSOR}
 )
 
 add_definitions(${PCL_DEFINITIONS})

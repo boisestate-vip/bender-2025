@@ -1,0 +1,86 @@
+[0.000000] (-) TimerEvent: {}
+[0.001006] (ydlidar_ros2_driver) JobQueued: {'identifier': 'ydlidar_ros2_driver', 'dependencies': OrderedDict()}
+[0.001280] (ydlidar_ros2_driver) JobStarted: {'identifier': 'ydlidar_ros2_driver'}
+[0.014464] (ydlidar_ros2_driver) JobProgress: {'identifier': 'ydlidar_ros2_driver', 'progress': 'cmake'}
+[0.015516] (ydlidar_ros2_driver) Command: {'cmd': ['/usr/bin/cmake', '/home/bender/bender-2025/src/sensors/jetson/ydlidar_ws/src/ydlidar_ros2_driver', '-DCMAKE_INSTALL_PREFIX=/home/bender/bender-2025/src/sensors/jetson/ydlidar_ws/install/ydlidar_ros2_driver'], 'cwd': '/home/bender/bender-2025/src/sensors/jetson/ydlidar_ws/build/ydlidar_ros2_driver', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'bender'), ('XDG_SEAT', 'seat0'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/iron/opt/rviz_ogre_vendor/lib:/opt/ros/iron/lib/aarch64-linux-gnu:/opt/ros/iron/lib'), ('HOME', '/home/bender'), ('OLDPWD', '/home/bender/bender-2025/src/sensors/jetson'), ('DESKTOP_SESSION', 'i3'), ('ROS_PYTHON_VERSION', '3'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1330'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/bender/bender-2025/src/sensors/jetson/rplidar_ws/install'), ('ROS_DISTRO', 'iron'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'bender'), ('WINDOWID', '37748739'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'bender'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '1'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/iron/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'i3'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'i3'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/bender/bender-2025/src/sensors/jetson/rplidar_ws/install/rplidar_ros:/opt/ros/iron'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'i3'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('ROS_AUTOMATIC_DISCOVERY_RANGE', 'SUBNET'), ('QT_IM_MODULE', 'ibus'), ('XDG_VTNR', '2'), ('PWD', '/home/bender/bender-2025/src/sensors/jetson/ydlidar_ws/build/ydlidar_ros2_driver'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-i3:/etc/xdg'), ('CLUTTER_IM_MODULE', 'ibus'), ('XDG_DATA_DIRS', '/usr/share/i3:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/iron/lib/python3.10/site-packages'), ('I3SOCK', '/run/user/1000/i3/ipc-socket.1998'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/bender/bender-2025/src/sensors/jetson/rplidar_ws/install/rplidar_ros:/opt/ros/iron')]), 'shell': False}
+[0.099559] (-) TimerEvent: {}
+[0.118781] (ydlidar_ros2_driver) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.199739] (-) TimerEvent: {}
+[0.239508] (ydlidar_ros2_driver) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.260989] (ydlidar_ros2_driver) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.299894] (-) TimerEvent: {}
+[0.400750] (-) TimerEvent: {}
+[0.411603] (ydlidar_ros2_driver) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.436216] (ydlidar_ros2_driver) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.437344] (ydlidar_ros2_driver) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.438699] (ydlidar_ros2_driver) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.449307] (ydlidar_ros2_driver) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.500926] (-) TimerEvent: {}
+[0.601643] (-) TimerEvent: {}
+[0.604826] (ydlidar_ros2_driver) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.630779] (ydlidar_ros2_driver) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.631830] (ydlidar_ros2_driver) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.634151] (ydlidar_ros2_driver) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.643579] (ydlidar_ros2_driver) StdoutLine: {'line': b'-- Found ament_cmake: 2.0.7 (/opt/ros/iron/share/ament_cmake/cmake)\n'}
+[0.701716] (-) TimerEvent: {}
+[0.802198] (-) TimerEvent: {}
+[0.902664] (-) TimerEvent: {}
+[1.003143] (-) TimerEvent: {}
+[1.029881] (ydlidar_ros2_driver) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter \n'}
+[1.103257] (-) TimerEvent: {}
+[1.203849] (-) TimerEvent: {}
+[1.238773] (ydlidar_ros2_driver) StdoutLine: {'line': b'-- Found rclcpp: 21.0.8 (/opt/ros/iron/share/rclcpp/cmake)\n'}
+[1.303939] (-) TimerEvent: {}
+[1.330548] (ydlidar_ros2_driver) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.0.1 (/opt/ros/iron/share/rosidl_generator_c/cmake)\n'}
+[1.353335] (ydlidar_ros2_driver) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.0.1 (/opt/ros/iron/share/rosidl_generator_cpp/cmake)\n'}
+[1.381829] (ydlidar_ros2_driver) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.404007] (-) TimerEvent: {}
+[1.416316] (ydlidar_ros2_driver) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.504149] (-) TimerEvent: {}
+[1.604580] (-) TimerEvent: {}
+[1.704969] (-) TimerEvent: {}
+[1.722093] (ydlidar_ros2_driver) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.1.0 (/opt/ros/iron/share/rmw_implementation_cmake/cmake)\n'}
+[1.726000] (ydlidar_ros2_driver) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 7.1.4 (/opt/ros/iron/share/rmw_fastrtps_cpp/cmake)\n'}
+[1.805118] (-) TimerEvent: {}
+[1.900256] (ydlidar_ros2_driver) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[1.905213] (-) TimerEvent: {}
+[1.958436] (ydlidar_ros2_driver) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/iron/include  \n'}
+[2.005395] (-) TimerEvent: {}
+[2.037753] (ydlidar_ros2_driver) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[2.105500] (-) TimerEvent: {}
+[2.205960] (-) TimerEvent: {}
+[2.306408] (-) TimerEvent: {}
+[2.357186] (ydlidar_ros2_driver) StdoutLine: {'line': b'-- Found sensor_msgs: 5.0.1 (/opt/ros/iron/share/sensor_msgs/cmake)\n'}
+[2.406533] (-) TimerEvent: {}
+[2.506970] (-) TimerEvent: {}
+[2.607339] (-) TimerEvent: {}
+[2.707763] (-) TimerEvent: {}
+[2.753740] (ydlidar_ros2_driver) StdoutLine: {'line': b'-- Found visualization_msgs: 5.0.1 (/opt/ros/iron/share/visualization_msgs/cmake)\n'}
+[2.807844] (-) TimerEvent: {}
+[2.908136] (-) TimerEvent: {}
+[3.008474] (-) TimerEvent: {}
+[3.047597] (ydlidar_ros2_driver) StdoutLine: {'line': b'-- Found std_srvs: 5.0.1 (/opt/ros/iron/share/std_srvs/cmake)\n'}
+[3.108558] (-) TimerEvent: {}
+[3.150571] (ydlidar_ros2_driver) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:25 (find_package):\n'}
+[3.150864] (ydlidar_ros2_driver) StderrLine: {'line': b'  By not providing "Findydlidar_sdk.cmake" in CMAKE_MODULE_PATH this project\n'}
+[3.151013] (ydlidar_ros2_driver) StderrLine: {'line': b'  has asked CMake to find a package configuration file provided by\n'}
+[3.151143] (ydlidar_ros2_driver) StderrLine: {'line': b'  "ydlidar_sdk", but CMake did not find one.\n'}
+[3.151266] (ydlidar_ros2_driver) StderrLine: {'line': b'\n'}
+[3.151385] (ydlidar_ros2_driver) StderrLine: {'line': b'  Could not find a package configuration file provided by "ydlidar_sdk" with\n'}
+[3.151503] (ydlidar_ros2_driver) StderrLine: {'line': b'  any of the following names:\n'}
+[3.151617] (ydlidar_ros2_driver) StderrLine: {'line': b'\n'}
+[3.151729] (ydlidar_ros2_driver) StderrLine: {'line': b'    ydlidar_sdkConfig.cmake\n'}
+[3.151839] (ydlidar_ros2_driver) StderrLine: {'line': b'    ydlidar_sdk-config.cmake\n'}
+[3.151951] (ydlidar_ros2_driver) StderrLine: {'line': b'\n'}
+[3.152061] (ydlidar_ros2_driver) StderrLine: {'line': b'  Add the installation prefix of "ydlidar_sdk" to CMAKE_PREFIX_PATH or set\n'}
+[3.152172] (ydlidar_ros2_driver) StderrLine: {'line': b'  "ydlidar_sdk_DIR" to a directory containing one of the above files.  If\n'}
+[3.152286] (ydlidar_ros2_driver) StderrLine: {'line': b'  "ydlidar_sdk" provides a separate development package or SDK, be sure it\n'}
+[3.152427] (ydlidar_ros2_driver) StderrLine: {'line': b'  has been installed.\n'}
+[3.152541] (ydlidar_ros2_driver) StderrLine: {'line': b'\n'}
+[3.152645] (ydlidar_ros2_driver) StderrLine: {'line': b'\x1b[0m\n'}
+[3.152767] (ydlidar_ros2_driver) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[3.152899] (ydlidar_ros2_driver) StdoutLine: {'line': b'See also "/home/bender/bender-2025/src/sensors/jetson/ydlidar_ws/build/ydlidar_ros2_driver/CMakeFiles/CMakeOutput.log".\n'}
+[3.171990] (ydlidar_ros2_driver) CommandEnded: {'returncode': 1}
+[3.209424] (-) TimerEvent: {}
+[3.225042] (ydlidar_ros2_driver) JobEnded: {'identifier': 'ydlidar_ros2_driver', 'rc': 1}
+[3.236158] (-) EventReactorShutdown: {}

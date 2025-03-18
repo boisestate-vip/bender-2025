@@ -1,0 +1,6 @@
+[submodule "dependencies/YDLidar-SDK"]
+	path = dependencies/YDLidar-SDK
+	url = https://github.com/YDLIDAR/YDLidar-SDK.git
+[submodule "dependencies/pcl"]
+	path = dependencies/pcl
+	url = https://github.com/PointCloudLibrary/pcl.git

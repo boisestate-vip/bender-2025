@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-ee5f49c01b63849cd653.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "unitree_lidar_ros2",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-0348ff932de499234ab0.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "unitree_lidar_ros2_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-unitree_lidar_ros2_node-2a0321c096f83d219574.json",
+					"name" : "unitree_lidar_ros2_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "unitree_lidar_ros2_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-unitree_lidar_ros2_uninstall-7a0f0470f8913108964d.json",
+					"name" : "unitree_lidar_ros2_uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/bender/bender-2025/src/sensors/jetson/unitree_ws/build/unitree_lidar_ros2",
+		"source" : "/home/bender/bender-2025/src/sensors/jetson/unitree_ws/src/unitree_lidar_ros2"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

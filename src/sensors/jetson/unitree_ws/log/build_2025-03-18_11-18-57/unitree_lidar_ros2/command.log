@@ -1,0 +1,2 @@
+Invoking command in '/home/bender/bender-2025/src/sensors/jetson/unitree_ws/build/unitree_lidar_ros2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake --build /home/bender/bender-2025/src/sensors/jetson/unitree_ws/build/unitree_lidar_ros2 -- -j6 -l6
+Invoked command in '/home/bender/bender-2025/src/sensors/jetson/unitree_ws/build/unitree_lidar_ros2' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake --build /home/bender/bender-2025/src/sensors/jetson/unitree_ws/build/unitree_lidar_ros2 -- -j6 -l6

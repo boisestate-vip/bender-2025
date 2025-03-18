@@ -1,0 +1,48 @@
+[0.000000] (-) TimerEvent: {}
+[0.000717] (unitree_lidar_ros2) JobQueued: {'identifier': 'unitree_lidar_ros2', 'dependencies': OrderedDict()}
+[0.001265] (unitree_lidar_ros2) JobStarted: {'identifier': 'unitree_lidar_ros2'}
+[0.016513] (unitree_lidar_ros2) JobProgress: {'identifier': 'unitree_lidar_ros2', 'progress': 'cmake'}
+[0.018233] (unitree_lidar_ros2) JobProgress: {'identifier': 'unitree_lidar_ros2', 'progress': 'build'}
+[0.019824] (unitree_lidar_ros2) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/bender/bender-2025/src/sensors/jetson/unitree_ws/build/unitree_lidar_ros2', '--', '-j6', '-l6'], 'cwd': '/home/bender/bender-2025/src/sensors/jetson/unitree_ws/build/unitree_lidar_ros2', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'bender'), ('XDG_SEAT', 'seat0'), ('BENDER_DEPENDENCIES_DIR', '/home/bender/bender-2025/scripts/../dependencies'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/iron/opt/rviz_ogre_vendor/lib:/opt/ros/iron/lib/aarch64-linux-gnu:/opt/ros/iron/lib'), ('HOME', '/home/bender'), ('OLDPWD', '/home/bender/bender-2025'), ('DESKTOP_SESSION', 'i3'), ('ROS_PYTHON_VERSION', '3'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '1330'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('BENDER_DIR', '/home/bender/bender-2025/scripts/..'), ('BENDER_BIN_DIR', '/home/bender/bender-2025/scripts/../bin'), ('COLCON_PREFIX_PATH', '/home/bender/bender-2025/src/sensors/jetson/rplidar_ws/install'), ('ROS_DISTRO', 'iron'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'bender'), ('WINDOWID', '37748739'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'bender'), ('TERM', 'xterm-256color'), ('XDG_SESSION_ID', '1'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/iron/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'i3'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'i3'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/bender/bender-2025/src/sensors/jetson/rplidar_ws/install/rplidar_ros:/opt/ros/iron'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'i3'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('ROS_AUTOMATIC_DISCOVERY_RANGE', 'SUBNET'), ('QT_IM_MODULE', 'ibus'), ('XDG_VTNR', '2'), ('PWD', '/home/bender/bender-2025/src/sensors/jetson/unitree_ws/build/unitree_lidar_ros2'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-i3:/etc/xdg'), ('CLUTTER_IM_MODULE', 'ibus'), ('XDG_DATA_DIRS', '/usr/share/i3:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/iron/lib/python3.10/site-packages'), ('BENDER_SCRIPTS_DIR', '/home/bender/bender-2025/scripts/../scripts'), ('I3SOCK', '/run/user/1000/i3/ipc-socket.1998'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/bender/bender-2025/src/sensors/jetson/rplidar_ws/install/rplidar_ros:/opt/ros/iron')]), 'shell': False}
+[0.099327] (-) TimerEvent: {}
+[0.170545] (unitree_lidar_ros2) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/unitree_lidar_ros2_node.dir/src/unitree_lidar_ros2_node.cpp.o\x1b[0m\n'}
+[0.199508] (-) TimerEvent: {}
+[0.300140] (-) TimerEvent: {}
+[0.400712] (-) TimerEvent: {}
+[0.501381] (-) TimerEvent: {}
+[0.602034] (-) TimerEvent: {}
+[0.702654] (-) TimerEvent: {}
+[0.803322] (-) TimerEvent: {}
+[0.904004] (-) TimerEvent: {}
+[1.004671] (-) TimerEvent: {}
+[1.105295] (-) TimerEvent: {}
+[1.205853] (-) TimerEvent: {}
+[1.306432] (-) TimerEvent: {}
+[1.407120] (-) TimerEvent: {}
+[1.507791] (-) TimerEvent: {}
+[1.608491] (-) TimerEvent: {}
+[1.709169] (-) TimerEvent: {}
+[1.809849] (-) TimerEvent: {}
+[1.910527] (-) TimerEvent: {}
+[2.011464] (-) TimerEvent: {}
+[2.112139] (-) TimerEvent: {}
+[2.212768] (-) TimerEvent: {}
+[2.313346] (-) TimerEvent: {}
+[2.414004] (-) TimerEvent: {}
+[2.514902] (-) TimerEvent: {}
+[2.615560] (-) TimerEvent: {}
+[2.716200] (-) TimerEvent: {}
+[2.816872] (-) TimerEvent: {}
+[2.917554] (-) TimerEvent: {}
+[3.018221] (-) TimerEvent: {}
+[3.026760] (unitree_lidar_ros2) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/bender/bender-2025/src/sensors/jetson/unitree_ws/src/unitree_lidar_ros2/src/unitree_lidar_ros2_node.cpp:5\x1b[m\x1b[K:\n'}
+[3.027197] (unitree_lidar_ros2) StderrLine: {'line': b'\x1b[01m\x1b[K/home/bender/bender-2025/src/sensors/jetson/unitree_ws/src/unitree_lidar_ros2/include/unitree_lidar_ros2.h:28:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[Kunitree_lidar_sdk_pcl.h: No such file or directory\n'}
+[3.027357] (unitree_lidar_ros2) StderrLine: {'line': b'   28 | #include \x1b[01;31m\x1b[K"unitree_lidar_sdk_pcl.h"\x1b[m\x1b[K\n'}
+[3.027487] (unitree_lidar_ros2) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.027608] (unitree_lidar_ros2) StderrLine: {'line': b'compilation terminated.\n'}
+[3.051541] (unitree_lidar_ros2) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/unitree_lidar_ros2_node.dir/build.make:76: CMakeFiles/unitree_lidar_ros2_node.dir/src/unitree_lidar_ros2_node.cpp.o] Error 1\n'}
+[3.052253] (unitree_lidar_ros2) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/unitree_lidar_ros2_node.dir/all] Error 2\n'}
+[3.052666] (unitree_lidar_ros2) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[3.058522] (unitree_lidar_ros2) CommandEnded: {'returncode': 2}
+[3.099028] (unitree_lidar_ros2) JobEnded: {'identifier': 'unitree_lidar_ros2', 'rc': 2}
+[3.101678] (-) EventReactorShutdown: {}

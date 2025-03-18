@@ -1,0 +1,64 @@
+[0.020s] Invoking command in '/home/bender/bender-2025/src/sensors/jetson/unitree_ws/build/unitree_lidar_ros2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake --build /home/bender/bender-2025/src/sensors/jetson/unitree_ws/build/unitree_lidar_ros2 -- -j6 -l6
+[0.067s] -- Found ament_cmake: 2.0.7 (/opt/ros/iron/share/ament_cmake/cmake)
+[0.384s] -- Found rclcpp: 21.0.8 (/opt/ros/iron/share/rclcpp/cmake)
+[0.466s] -- Found rosidl_generator_c: 4.0.1 (/opt/ros/iron/share/rosidl_generator_c/cmake)
+[0.481s] -- Found rosidl_generator_cpp: 4.0.1 (/opt/ros/iron/share/rosidl_generator_cpp/cmake)
+[0.504s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.534s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.813s] -- Found rmw_implementation_cmake: 7.1.0 (/opt/ros/iron/share/rmw_implementation_cmake/cmake)
+[0.816s] -- Found rmw_fastrtps_cpp: 7.1.4 (/opt/ros/iron/share/rmw_fastrtps_cpp/cmake)
+[1.038s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.336s] -- Found std_msgs: 5.0.1 (/opt/ros/iron/share/std_msgs/cmake)
+[1.393s] -- Found sensor_msgs: 5.0.1 (/opt/ros/iron/share/sensor_msgs/cmake)
+[1.651s] -- Found pcl_conversions: 2.5.4 (/opt/ros/iron/share/pcl_conversions/cmake)
+[1.982s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[2.037s] -- FLANN found (include: /usr/include, lib: /usr/lib/aarch64-linux-gnu/libflann_cpp.so)
+[2.612s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[2.622s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/aarch64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[2.889s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[2.899s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[2.909s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/aarch64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[3.160s] -- Found Qhull version 8.0.2
+[3.419s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[3.714s] [33mCMake Warning (dev) at CMakeLists.txt:23 (find_package):
+[3.714s]   Policy CMP0074 is not set: find_package uses <PackageName>_ROOT variables.
+[3.715s]   Run "cmake --help-policy CMP0074" for policy details.  Use the cmake_policy
+[3.715s]   command to set the policy and suppress this warning.
+[3.715s] 
+[3.715s]   CMake variable PCL_ROOT is set to:
+[3.715s] 
+[3.715s]     /usr
+[3.715s] 
+[3.715s]   For compatibility, CMake is ignoring the variable.
+[3.716s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[3.716s] [0m
+[4.109s] -- Configuring done
+[4.182s] -- Generating done
+[4.205s] -- Build files have been written to: /home/bender/bender-2025/src/sensors/jetson/unitree_ws/build/unitree_lidar_ros2
+[4.284s] [35m[1mConsolidate compiler generated dependencies of target unitree_lidar_ros2_node[0m
+[4.356s] [ 50%] [32mBuilding CXX object CMakeFiles/unitree_lidar_ros2_node.dir/src/unitree_lidar_ros2_node.cpp.o[0m
+[31.972s] [100%] [32m[1mLinking CXX executable unitree_lidar_ros2_node[0m
+[32.967s] [100%] Built target unitree_lidar_ros2_node
+[32.993s] Invoked command in '/home/bender/bender-2025/src/sensors/jetson/unitree_ws/build/unitree_lidar_ros2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake --build /home/bender/bender-2025/src/sensors/jetson/unitree_ws/build/unitree_lidar_ros2 -- -j6 -l6
+[33.017s] Invoking command in '/home/bender/bender-2025/src/sensors/jetson/unitree_ws/build/unitree_lidar_ros2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake --install /home/bender/bender-2025/src/sensors/jetson/unitree_ws/build/unitree_lidar_ros2
+[33.032s] -- Install configuration: ""
+[33.033s] -- Installing: /home/bender/bender-2025/src/sensors/jetson/unitree_ws/install/unitree_lidar_ros2/lib/unitree_lidar_ros2/unitree_lidar_ros2_node
+[33.039s] -- Set runtime path of "/home/bender/bender-2025/src/sensors/jetson/unitree_ws/install/unitree_lidar_ros2/lib/unitree_lidar_ros2/unitree_lidar_ros2_node" to ""
+[33.040s] -- Up-to-date: /home/bender/bender-2025/src/sensors/jetson/unitree_ws/install/unitree_lidar_ros2/share/unitree_lidar_ros2/view.rviz
+[33.040s] -- Up-to-date: /home/bender/bender-2025/src/sensors/jetson/unitree_ws/install/unitree_lidar_ros2/share/unitree_lidar_ros2/launch.py
+[33.040s] -- Up-to-date: /home/bender/bender-2025/src/sensors/jetson/unitree_ws/install/unitree_lidar_ros2/share/ament_index/resource_index/package_run_dependencies/unitree_lidar_ros2
+[33.040s] -- Up-to-date: /home/bender/bender-2025/src/sensors/jetson/unitree_ws/install/unitree_lidar_ros2/share/ament_index/resource_index/parent_prefix_path/unitree_lidar_ros2
+[33.041s] -- Up-to-date: /home/bender/bender-2025/src/sensors/jetson/unitree_ws/install/unitree_lidar_ros2/share/unitree_lidar_ros2/environment/ament_prefix_path.sh
+[33.041s] -- Up-to-date: /home/bender/bender-2025/src/sensors/jetson/unitree_ws/install/unitree_lidar_ros2/share/unitree_lidar_ros2/environment/ament_prefix_path.dsv
+[33.041s] -- Up-to-date: /home/bender/bender-2025/src/sensors/jetson/unitree_ws/install/unitree_lidar_ros2/share/unitree_lidar_ros2/environment/path.sh
+[33.041s] -- Up-to-date: /home/bender/bender-2025/src/sensors/jetson/unitree_ws/install/unitree_lidar_ros2/share/unitree_lidar_ros2/environment/path.dsv
+[33.041s] -- Up-to-date: /home/bender/bender-2025/src/sensors/jetson/unitree_ws/install/unitree_lidar_ros2/share/unitree_lidar_ros2/local_setup.bash
+[33.042s] -- Up-to-date: /home/bender/bender-2025/src/sensors/jetson/unitree_ws/install/unitree_lidar_ros2/share/unitree_lidar_ros2/local_setup.sh
+[33.042s] -- Up-to-date: /home/bender/bender-2025/src/sensors/jetson/unitree_ws/install/unitree_lidar_ros2/share/unitree_lidar_ros2/local_setup.zsh
+[33.042s] -- Up-to-date: /home/bender/bender-2025/src/sensors/jetson/unitree_ws/install/unitree_lidar_ros2/share/unitree_lidar_ros2/local_setup.dsv
+[33.042s] -- Installing: /home/bender/bender-2025/src/sensors/jetson/unitree_ws/install/unitree_lidar_ros2/share/unitree_lidar_ros2/package.dsv
+[33.042s] -- Up-to-date: /home/bender/bender-2025/src/sensors/jetson/unitree_ws/install/unitree_lidar_ros2/share/ament_index/resource_index/packages/unitree_lidar_ros2
+[33.042s] -- Up-to-date: /home/bender/bender-2025/src/sensors/jetson/unitree_ws/install/unitree_lidar_ros2/share/unitree_lidar_ros2/cmake/unitree_lidar_ros2Config.cmake
+[33.042s] -- Up-to-date: /home/bender/bender-2025/src/sensors/jetson/unitree_ws/install/unitree_lidar_ros2/share/unitree_lidar_ros2/cmake/unitree_lidar_ros2Config-version.cmake
+[33.043s] -- Up-to-date: /home/bender/bender-2025/src/sensors/jetson/unitree_ws/install/unitree_lidar_ros2/share/unitree_lidar_ros2/package.xml
+[33.046s] Invoked command in '/home/bender/bender-2025/src/sensors/jetson/unitree_ws/build/unitree_lidar_ros2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/iron /usr/bin/cmake --install /home/bender/bender-2025/src/sensors/jetson/unitree_ws/build/unitree_lidar_ros2

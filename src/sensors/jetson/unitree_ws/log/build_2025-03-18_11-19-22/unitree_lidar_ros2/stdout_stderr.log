@@ -1,0 +1,9 @@
+[ 50%] [32mBuilding CXX object CMakeFiles/unitree_lidar_ros2_node.dir/src/unitree_lidar_ros2_node.cpp.o[0m
+In file included from [01m[K/home/bender/bender-2025/src/sensors/jetson/unitree_ws/src/unitree_lidar_ros2/src/unitree_lidar_ros2_node.cpp:5[m[K:
+[01m[K/home/bender/bender-2025/src/sensors/jetson/unitree_ws/src/unitree_lidar_ros2/include/unitree_lidar_ros2.h:28:10:[m[K [01;31m[Kfatal error: [m[Kunitree_lidar_sdk_pcl.h: No such file or directory
+   28 | #include [01;31m[K"unitree_lidar_sdk_pcl.h"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/unitree_lidar_ros2_node.dir/build.make:76: CMakeFiles/unitree_lidar_ros2_node.dir/src/unitree_lidar_ros2_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/unitree_lidar_ros2_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

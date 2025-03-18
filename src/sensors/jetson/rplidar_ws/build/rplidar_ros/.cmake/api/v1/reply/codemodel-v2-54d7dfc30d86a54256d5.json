@@ -1,0 +1,97 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-fca5f7e5c82130e7aa4f.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "rplidar_ros",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "rplidar_client::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-rplidar_client-53d40e22e7cb9101da59.json",
+					"name" : "rplidar_client",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "rplidar_composition::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-rplidar_composition-36323d0303e45d4b63b4.json",
+					"name" : "rplidar_composition",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "rplidar_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-rplidar_node-3a4594b2d9c91802b066.json",
+					"name" : "rplidar_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "rplidar_ros_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-rplidar_ros_uninstall-41fa1cbce987648b7bc0.json",
+					"name" : "rplidar_ros_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-5e0df05306e4f4ca8ae4.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/bender/bender-2025/src/sensors/jetson/rplidar_ws/build/rplidar_ros",
+		"source" : "/home/bender/bender-2025/src/sensors/jetson/rplidar_ws/src/rplidar_ros"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}
