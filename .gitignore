@@ -33,3 +33,8 @@
 
 # anything in the bin 
 bin
+
+# anything in a build, install, or log dir
+*build*
+*install*
+*log*
