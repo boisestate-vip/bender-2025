@@ -1,4 +1,8 @@
 
+# add user to dialout
+
+ * sudo usermod -a -G dialout $USER
+
 # for unitree
 
  * https://github.com/PointCloudLibrary/pcl
