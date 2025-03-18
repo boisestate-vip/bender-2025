@@ -2,10 +2,10 @@ cmake_minimum_required(VERSION 3.8)
 project(openvr_tracker_node)
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
-  add_compile_options(-Wall -Wextra -Wpedantic -std=c++0x -g)
+  add_compile_options(-Wall -Wextra -Wpedantic -std=c++17)
 endif()
 
-set(OpenVR_INCLUDE_DIR "$ENV{HOME}/vip/openvr/headers")
+set(OpenVR_INCLUDE_DIR "$ENV{BENDER_DEPENDENCIES_DIR}/openvr/headers")
 
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
@@ -25,7 +25,7 @@ find_package(OpenVR REQUIRED)
 
 add_executable(openvr_tracker_node src/openvr_tracker_node.cpp)
 target_link_libraries(openvr_tracker_node OpenVR::OpenVR)
-ament_target_dependencies(openvr_tracker_node rclcpp sensor_msgs geometry_msgs visualization_msgs nav_msgs tf2)
+ament_target_dependencies(openvr_tracker_node rclcpp sensor_msgs geometry_msgs visualization_msgs nav_msgs builtin_interfaces tf2)
 
 install(
    TARGETS openvr_tracker_node

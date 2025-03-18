@@ -4,3 +4,6 @@
 [submodule "dependencies/pcl"]
 	path = dependencies/pcl
 	url = https://github.com/PointCloudLibrary/pcl.git
+[submodule "dependencies/openvr"]
+	path = dependencies/openvr
+	url = https://github.com/ValveSoftware/openvr.git
