@@ -7,3 +7,6 @@
 [submodule "dependencies/openvr"]
 	path = dependencies/openvr
 	url = https://github.com/ValveSoftware/openvr.git
+[submodule "src/nav/kurome"]
+	path = src/nav/kurome
+	url = https://github.com/qeftser/kurome.git
