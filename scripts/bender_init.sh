@@ -21,12 +21,13 @@ SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 # add startup to .bashrc
 echo ". $SCRIPT_DIR/setup.sh" >> /home/$SUDO_USER/.bashrc 
 
+# set device name for bender
+rm -f $SCRIPT_DIR/../bin/name
+touch $SCRIPT_DIR/../bin/name
+echo $1 >> $SCRIPT_DIR/../bin/name
+
 source /home/$SUDO_USER/.bashrc
 
-# set device name for bender
-rm -f $BENDER_BIN_DIR/name
-touch $BENDER_BIN_DIR/name
-echo $1 >> $BENDER_BIN_DIR/name
 
 
 
