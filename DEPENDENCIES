@@ -3,9 +3,15 @@
 
  * sudo usermod -a -G dialout $USER
 
-# for unitree
+# for kurome ceres build
 
- * https://github.com/PointCloudLibrary/pcl
+ * sudo apt install libabsl-dev
+ * sudo apt install libgoogle-glog-dev
+ 
+# for kurome general build
+
+ * sudo apt install libsfml-dev
+ * sudo apt install libeigen3-dev
 
 # realsense 
 
@@ -21,16 +27,3 @@
 
  * steam   
 
- * https://github.com/ValveSoftware/openvr
-
-# rplidar sdk
-
- * https://github.com/Slamtec/rplidar_sdk
-
-# ydlidar sdk
-
- * https://github.com/YDLIDAR/YDLidar-SDK
-
-# unitree sdk
-
- * https://github.com/unitreerobotics/unilidar_sdk
