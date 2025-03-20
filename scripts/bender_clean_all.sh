@@ -6,14 +6,6 @@ if [ "$BENDER_SETUP" != "true" ]; then
    exit 1
 fi
 
-# update git submodules
-bash $BENDER_SCRIPTS_DIR/update_submodules.sh
-
-# initialize file we are going to store our successes in
-mkdir -p $BENDER_DIR/bin
-rm -f $BENDER_BIN_DIR/packages
-touch $BENDER_DIR/bin/packages
-
 # package directories
 packages=("$BENDER_DIR/src/sensors/realsense_ws" \
           "$BENDER_DIR/src/sensors/rplidar_ws" \
@@ -27,12 +19,18 @@ packages=("$BENDER_DIR/src/sensors/realsense_ws" \
 
 for path in ${packages[@]}; do
    cd $path
-   colcon build
-   if (( $? != 0 )); then
-      echo "${path##*/} FAILED" >> $BENDER_BIN_DIR/packages
-   else
-      echo "${path##*/} SUCCEEDED" >> $BENDER_BIN_DIR/packages
-   fi
+   rm -rf build install log
 done
 
-cat $BENDER_BIN_DIR/packages
+# dependency directories
+deps=("$BENDER_DEPENDENCIES_DIR/YDLidar-SDK" \
+      "$BENDER_DEPENDENCIES_DIR/ceres-solver-2.2.0" \
+      "$BENDER_DEPENDENCIES_DIR/librealsense-2.53.1" \
+      "$BENDER_DEPENDENCIES_DIR/openvr" \
+      "$BENDER_DEPENDENCIES_DIR/pcl" \
+      "$BENDER_DEPENDENCIES_DIR/unitree_lidar_sdk")
+
+for path in ${deps[@]}; do
+   cd $path
+   rm -rf build 
+done

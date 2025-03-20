@@ -27,3 +27,5 @@ bin
 # the ceres library
 ceres-solver-2.2.0
 
+# the realsense library
+librealsense-2.53.1
