@@ -23,7 +23,7 @@ echo ". $SCRIPT_DIR/setup.sh" >> /home/$SUDO_USER/.bashrc
 
 # set device name for bender
 mkdir -p $SCRIPT_DIR/../bin
-chmod 733 $SCRIPT_DIR/../bin 
+chmod 777 $SCRIPT_DIR/../bin 
 rm -f $SCRIPT_DIR/../bin/name
 touch $SCRIPT_DIR/../bin/name
 echo $1 >> $SCRIPT_DIR/../bin/name
