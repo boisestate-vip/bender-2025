@@ -7,6 +7,7 @@ export BENDER_DIR=$SCRIPT_DIR/..
 export BENDER_DEPENDENCIES_DIR=$BENDER_DIR/dependencies
 export BENDER_SCRIPTS_DIR=$BENDER_DIR/scripts
 export BENDER_BIN_DIR=$BENDER_DIR/bin
+export BENDER_WORKSPACES_DIR=$BENDER_DIR/workspaces
 export BENDER_HOSTNAME=$(<$BENDER_BIN_DIR/name)
 
 shopt -s nullglob
