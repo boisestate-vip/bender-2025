@@ -19,10 +19,11 @@
 # anything in the bin 
 bin
 
-# anything in a build, install, or log dir
+# anything in a build, install, log, or parameters dir
 *build*
 *install*
 *log*
+*parameters*
 
 # the ceres library
 ceres-solver-2.2.0

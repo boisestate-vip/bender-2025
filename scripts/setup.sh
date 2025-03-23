@@ -1,7 +1,9 @@
 #!/bin/bash
 
+# the the directory that this script is being run in
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
+# setup all the variables used by the other scripts
 export BENDER_SETUP="true"
 export BENDER_DIR=$SCRIPT_DIR/..
 export BENDER_DEPENDENCIES_DIR=$BENDER_DIR/dependencies
@@ -18,6 +20,8 @@ mkdir -p $BENDER_BIN_DIR
 rm -f $BENDER_BIN_DIR/bender_aliases
 
 
+# export all the scripts into the local env exported as their
+# names so that they can be run easier
 for f in "${scripts[@]}"; do
    if [ "$f" != "$BENDER_SCRIPTS_DIR/setup.sh" ] && \
       [ "$f" != "$BENDER_SCRIPTS_DIR/teardown.sh" ]; then
@@ -28,3 +32,7 @@ for f in "${scripts[@]}"; do
 done
 
 source $BENDER_BIN_DIR/bender_aliases
+
+# export the directory openvr is in so that
+# the later build files can find it
+export OPENVR_DIRECTORY="$BENDER_DEPENDENCIES_DIR/openvr"

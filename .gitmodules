@@ -13,3 +13,9 @@
 [submodule "src/nav/diff_drive_ws/src/diff_drive"]
 	path = src/nav/diff_drive_ws/src/diff_drive
 	url = https://github.com/qeftser/odrive_diff_drive.git
+[submodule "src/sensors/synexens_ws/src/synexens_iron"]
+	path = src/sensors/synexens_ws/src/synexens_iron
+	url = https://github.com/qeftser/synexens_iron.git
+[submodule "src/sensors/vive_ws/src/openvr_ros2_tracker"]
+	path = src/sensors/vive_ws/src/openvr_ros2_tracker
+	url = https://github.com/qeftser/openvr_ros2_tracker.git

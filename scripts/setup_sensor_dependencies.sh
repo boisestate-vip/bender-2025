@@ -15,7 +15,12 @@ bash $BENDER_SCRIPTS_DIR/update_submodules.sh
 sudo apt-get install ros-iron-diagnostics unzip -y
 sudo apt-get install libssl-dev libusb-1.0-0.dev libudev-dev pkg-config libgtk-3-dev build-essential -y
 sudo apt-get install v4l-utils libglfw3-dev libgl1-mesa-dev libglu1-mesa-dev -y
-#
+
+# grab steam if we are on an x86 machine
+if [[ "$(arch)" = "x86_64" ]]; then
+   sudo apt install software-properties-common apt-transport-https curl steam-installer steam-devices -y
+fi
+
 # download librealsense
 cd $BENDER_DEPENDENCIES_DIR
 if [ ! -d librealsense-2.53.1 ]; then

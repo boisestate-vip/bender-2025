@@ -19,3 +19,9 @@ git pull origin main
 
 cd $BENDER_DIR/src/nav/diff_drive_ws/src/diff_drive
 git pull origin main
+
+cd $BENDER_DIR/src/sensors/synexens_ws/src/synexens_iron
+git pull origin main
+
+cd $BENDER_DIR/src/sensors/vive_ws/src/openvr_ros2_tracker
+git pull origin main
