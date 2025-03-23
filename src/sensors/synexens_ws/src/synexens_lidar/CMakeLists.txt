@@ -12,7 +12,7 @@ find_package(sensor_msgs REQUIRED)
 
 # Synexens sdk linking
 set(SYNEXENS_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/include")
-set(SYNEXENS_LIB_DIR "${CMAKE_CURRENT_SOURCE_DIR}/lib")
+set(SYNEXENS_LIB_DIR "${CMAKE_CURRENT_SOURCE_DIR}/lib/${CMAKE_SYSTEM_PROCESSOR}")
 include_directories(${SYNEXENS_INCLUDE_DIR})
 link_directories(${SYNEXENS_LIB_DIR})
 
