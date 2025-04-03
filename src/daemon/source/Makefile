@@ -4,7 +4,7 @@ CC := gcc
 
 # compiler and linker flags
 CC_FLAGS := -g
-LINKER_FLAGS := -g -lm -lsystemd -mrdrnd
+LINKER_FLAGS := -g -lm -lsystemd 
 
 # name of the program
 DAEMON_NAME := benderd
@@ -27,7 +27,7 @@ $(MAGMA_NAME): $(OBJ_FILES) Makefile
 	$(CC) $(OBJ_FILES) $(CC_FLAGS) src/magma.c $(LINKER_FLAGS) -o bin/$@
 
 .c.o: 
-	$(CC) -c $(CC_FLAGS) $< -o $@ -mrdrnd -g
+	$(CC) -c $(CC_FLAGS) $< -o $@ -g
 
 make_bin:
 	mkdir -p bin

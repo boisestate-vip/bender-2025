@@ -151,10 +151,11 @@ int main(int argc, char ** argv) {
    }
 
    if (rdrand_check || verbose) {
-      if (__RDRND__)
+#if __RDRND__
          fprintf(stdout,"compiled with rdrand\n");
-      else
+#else
          fprintf(stdout,"compiled without rdrand\n");
+#endif
    }
 
 
