@@ -4,12 +4,15 @@
 #include <stdio.h>
 #include <errno.h>
 #include <limits.h>
-#include <immintrin.h>
 #include <time.h>
 #include <fcntl.h>
 #include <string.h>
 #include <unistd.h>
 #include <sys/stat.h>
+
+#if __RDRND__
+#include <immintrin.h>
+#endif
 
 /* As defined in ГОСТ Р 34.12─2015 */
 const gost_s_box gost_default_s_box = {
