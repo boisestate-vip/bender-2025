@@ -52,6 +52,7 @@ sudo systemctl enable bender.service
 sudo systemctl start bender.service
 
 # copy man pages into their locations
+sudo mkdir -p /usr/local/man/man1
 sudo cp $BENDER_DIR/src/daemon/defaults/man/bender /usr/local/man/man1/bender.1
 sudo gzip /usr/local/man/man1/bender.1
 sudo cp $BENDER_DIR/src/daemon/defaults/man/magma /usr/local/man/man1/magma.1
