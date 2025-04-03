@@ -360,7 +360,7 @@ int gost_keygen(gost_key * key) {
 
    for (int i = 0; i < 8; ++i) {
 
-      *key[i] = random();
+      key[0][i] = random();
 
    }
 
