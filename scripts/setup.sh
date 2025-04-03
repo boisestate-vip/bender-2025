@@ -10,7 +10,11 @@ export BENDER_DEPENDENCIES_DIR=$BENDER_DIR/dependencies
 export BENDER_SCRIPTS_DIR=$BENDER_DIR/scripts
 export BENDER_BIN_DIR=$BENDER_DIR/bin
 export BENDER_WORKSPACES_DIR=$BENDER_DIR/workspaces
-export BENDER_HOSTNAME=$(<$BENDER_BIN_DIR/name)
+
+# ensures we can set the hostname seperate of an environment if needed
+if [ -z "$BENDER_HOSTNAME" ]; then
+   export BENDER_HOSTNAME=$(<$BENDER_BIN_DIR/name)
+fi
 
 shopt -s nullglob
 
@@ -28,6 +32,7 @@ for f in "${scripts[@]}"; do
       name="${f##*/}"
       name="${name%%.*}"
       echo "alias $name='$f'" >> $BENDER_BIN_DIR/bender_aliases
+      alias $name='$f'
    fi
 done
 
