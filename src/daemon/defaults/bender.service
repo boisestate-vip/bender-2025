@@ -9,6 +9,7 @@ ExecStart=/usr/sbin/benderd $ROS_DISTRO $BENDER_HOSTNAME $BENDER_DIR
 ExecReload=/usr/bin/bender -r
 Restart=on-abnormal
 Type=notify
+FileDescriptorStoreMax=1
 
 [Install]
 WantedBy=multi-user.target

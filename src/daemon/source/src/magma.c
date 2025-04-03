@@ -68,7 +68,7 @@ int main(int argc, char ** argv) {
    char * dest_path = "stdout";
    FILE * dest = stdout;
 
-   char c;
+   int c;
 
    while ( (c = getopt(argc,argv,"edk:vVhn:mgf:i:o:M:KPR")) != -1) {
 

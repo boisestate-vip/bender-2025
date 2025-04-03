@@ -50,7 +50,7 @@ int main(int argc, char ** argv) {
    char * ros2_distro = "<ros2-distro>";
                            
 
-   char c;
+   int c;
    char * name = "*";
    char * file = "/etc/bender/cmd.conf";
    char * keypath = "/etc/bender/key";
