@@ -10,7 +10,8 @@ bender is a tool for interfacing with the bender system daemon, which allows use
 commands to all machines on the bender robot at the same time. Commands are sent by the tool,
 executed remotely by the associated daemon, and the first 2048 characters of the printed output 
 is then returned to the tool as output. The tool
-will hang and must be exited via 'q' or SIGINT (^C). Because of the use of remote execution in
+will hang and must be exited via SIGINT (^C). This allows the command to delay until
+all messages have been collected. Because of the use of remote execution in
 this system, messages are encrypted using the GOST 28147-89 cipher described in RFC 5830, provided
 that a key file named 'key' is placed in the /etc/bender directory. See magma(1) 
 for information on key generation. 

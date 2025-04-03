@@ -19,6 +19,8 @@ if (( $ROS_VERSION != 2 )); then
    exit 1
 fi
 
+sudo apt install libsystemd-dev -y
+
 # install the config files
 sudo mkdir -p /etc/bender
 cp $BENDER_DIR/src/daemon/defaults/daemon.default.conf .
