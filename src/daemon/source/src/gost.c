@@ -1,6 +1,7 @@
 
 #include "gost.h"
 #include "base64.h"
+#include <stdlib.h>
 #include <stdio.h>
 #include <errno.h>
 #include <limits.h>
