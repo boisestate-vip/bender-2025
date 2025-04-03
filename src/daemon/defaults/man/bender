@@ -1,0 +1,86 @@
+.\" Manpage for bender.
+.\" Contact qeftser@gmail.com in to correct errors or typos.
+.TH man 1 "02 Apr 2025" "1.0" "bender man page"
+.SH NAME
+bender \- manage operations on the bender robot
+.SH SYNOPSIS
+bender [-h] [-v] [-r] [-c command] [-d] [-C] [-f file] [-n name] [-p port] [-k keypath]
+.SH DESCRIPTION
+bender is a tool for interfacing with the bender system daemon, which allows users to issue 
+commands to all machines on the bender robot at the same time. Commands are sent by the tool,
+executed remotely by the associated daemon, and the first 2048 characters of the printed output 
+is then returned to the tool as output. The tool
+will hang and must be exited via 'q' or SIGINT (^C). Because of the use of remote execution in
+this system, messages are encrypted using the GOST 28147-89 cipher described in RFC 5830, provided
+that a key file named 'key' is placed in the /etc/bender directory. See magma(1) 
+for information on key generation. 
+.SH CONFIGURATION
+The follow files are used for configuration. They are listed below
+.TP
+\fB/etc/bender/cmd.conf\fR
+Command configuration file. Specifies which commands the daemon and tool will respond to,
+and what actions they will take. See bender.config(7) for information on the format of 
+this file
+.TP
+\fB/etc/bender/daemon.conf\fR
+Daemon configuration file. Specifies information related to the ros2 and bender installation
+on the system. These values will have been set on install and should likely not be edited. The
+default socket (47600) is specified here as the socket for the daemon to listen on.
+.TP
+\fB/etc/bender/key\fR
+Key file. See magma(1) for info on key generation. This file does not have to be provided, as
+the system will operate via plaintext messages otherwise. If a key is provided, messages will
+be sent encrypted with a randomly generated nonce using gost's CF cipher mode. They will be 
+sent with a MAC of the pre-encrypted message, and the MAC will be checked on message decryption.
+Plaintext messages will be ignored when a key is loaded, and encrypted messages will be ignored
+if no key is provided. See RFC 5830 for a description of the GOST cipher.
+.SH OPTIONS
+.TP 
+\fB\-h\fR
+Print a help message, then exit
+.TP
+\fB\-v\fR
+Print version information
+.TP
+\fB\-r\fR
+Issue a reset command to all active daemons. This results in an attempted reloading of key 
+and configuration files. If there is an error reloading, the daemeon will fall back to the 
+previous values.
+.TP
+\fB\-c [command]\fR
+Send the provided command to all active daemons. This command must be specified in the
+command config file in order for it to be used by the daemon and the tool.
+.TP
+\fB\-d [command]\fR
+Print all commands the tool has loaded. Useful for debugging.
+.TP
+\fB\-C [command]\fR
+Check the command config file for errors, printing the locations where errors
+have occured in the file.
+.TP
+\fB\-f [command]\fR
+Specify an alternative path for the command configuration file. Note that the file
+the daemon reads from is not affected by this choice and issues may occur if these
+files do not match.
+.TP
+\fB\-n [name]\fR
+Specify the host to target. Only bender installs with the given name will respond
+to this message. Passed to the daemon on startup.
+.TP
+\fB\-p [name]\fR
+Specify a port to send to that differs from the default port (47600).
+.TP
+\fB\-k [keypath]\fR
+Specify a key file that differs from the default key path. Note that this does
+not change the key currently in use by the running daemons.
+.SH SECURITY CONSIDERATIONS
+The author will note that they are not a security expert and do not vouch for
+the security of this system. Do not allow this daemon to be installed on an
+untrusted network, as it could allow for remote execution of arbitrary commands
+by a bad actor.
+.SH SEE ALSO
+magma(1), bender.config(7) 
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+qeftser (qeftser@gmail.com)

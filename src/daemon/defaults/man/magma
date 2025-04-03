@@ -1,0 +1,77 @@
+.\" Manpage for magma.
+.\" Contact qeftser@gmail.com in to correct errors or typos.
+.TH man 1 "02 Apr 2025" "1.0" "magma man page"
+.SH NAME
+magma \- invoke the GOST cipher
+.SH SYNOPSIS
+magma [-e | -d | -m | -g] [-k file] [-v] [-V] [-h] [-n nonce] [-f,-i file] [-o file] [-M mode] [-K] [-P] [-R]
+.SH DESCRIPTION
+Implimentation of the GOST 28147-89 cipher as described in RFC 5830 and ГОСТ Р 34.12─2015. Functionality
+for key generation, MAC generation, ECB, CE, and CF cipher modes are supported. Allows for encryption and
+decryption of files and piping between stdin and stout. If multiple modes are provided results are
+unspecified. Default input is stdin, default output is stdout. Default mode is ECB. Trailing null bytes in
+final block (8 bytes) is culled during decryption by default.
+.PP
+The files ./gost.key, ~/.gost/gost.key, /etc/gost.key will be checked (in that order) for a key if no
+key is provided to the command.
+.SH OPTIONS
+.TP 
+\fB\-h\fR
+Print a help message, then exit
+.TP
+\fB\-v\fR
+Print version information
+.TP
+\fB\-e\fR
+Run in encryption mode (default). Accepts a file from input, encrypts it, and places the result in output.
+.TP
+\fB\-d\fR
+Run in decryption mode. Accepts a file from input, decrypts it, and places the result in output.
+.TP
+\fB\-m\fR
+Run in MAC mode. Accepts a file from input and prints the MAC to stdout.
+.TP
+\fB\-g\fR
+Run in key generation mode. Generates a key and places the result in output.
+.TP
+\fB\-k [file]\fR
+Loads a key from the given file. Key must have the required header and footer displayed in key 
+generation to be found. Key can be placed in a file of arbitrary size.
+.TP
+\fB\-n [nonce]\fR
+Use a nonce in encryption. Sets the mode to CF if no other mode is specified.
+.TP
+\fB\-f, \-i [file]\fR
+Provide a file as input. 
+.TP
+\fB\-o [file]\fR
+Provide a file as output. Previous contents of file will be overridden. 
+.TP
+\fB\-M [mode]\fR
+Set the mode of the cipher. Options are ECB (electronic code book), CE (counter encryption), 
+and CF (cipher feedback). Counter encryption and cipher feedback modes require a nonce, which
+will be zero if none is specified.
+.TP
+\fB\-V\fR
+Run in verbose mode. Additional output will be printed at all steps.
+.TP
+\fB\-K\fR
+Print the path of the key being used.
+.TP
+\fB\-P\fR
+Preserve the trailing null bytes in the final decryption block (8 bytes). The bytes are removed by
+default to ensure that the file size will be the same on input and output. If the trailing \\0 bytes
+need to be preserved, specify this flag.
+.TP
+\fB\-K\fR
+Print whether this build of magma was compiled with the rdrand x86/arm64 instruction. This instruction
+samples from hardware to produce true randomness, and as a result is a safe source of key generation. If
+the build is compiled without rdrand, the c call random() call is used to generate keys, with the seed being
+the c call srandom(time()*clock()). Use of this tool for key generation is discouraged if rdrand is not
+avaliable.
+.SH SEE ALSO
+RFC 5830, ГОСТ Р 34.12─2015
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+qeftser (qeftser@gmail.com)
