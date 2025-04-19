@@ -167,7 +167,7 @@ int main(int argc, char ** argv) {
 
    double motor_speed = 5;
    int drum_speed = 20;
-   int steps;
+   int steps = 0;
    int count;
 
    int drum_spinning;
@@ -243,6 +243,12 @@ int main(int argc, char ** argv) {
                snprintf(buf,buf_len,"SET_ARM %d\n",next);
                pw(write(controller,buf,strlen(buf)));
 
+               /*
+               steps += 100 * AR_MULT;
+               snprintf(buf,buf_len,"SET_ARM %d\n",steps);
+               pw(write(controller,buf,strlen(buf)));
+               */
+
                break;
             }
          case 'f':
@@ -255,6 +261,12 @@ int main(int argc, char ** argv) {
                snprintf(buf,buf_len,"SET_ARM %d\n",next);
                pw(write(controller,buf,strlen(buf)));
 
+               /*
+               steps -= 100 * AR_MULT;
+               snprintf(buf,buf_len,"SET_ARM %d\n",steps);
+               pw(write(controller,buf,strlen(buf)));
+               */
+
                break;
             }
          case 'q':
@@ -263,6 +275,11 @@ int main(int argc, char ** argv) {
                snprintf(buf,buf_len,"SET_DRUM %d\n", drum_speed * DR_MULT);
                pw(write(controller,buf,strlen(buf)));
 
+               /*
+               snprintf(buf,buf_len,"echo -ne \"SET_DRUM %d\\n\"", drum_speed * DR_MULT);
+               system(buf);
+               */
+
                break;
             }
          case 'e':
@@ -270,6 +287,11 @@ int main(int argc, char ** argv) {
                drum_spinning = 1;
                snprintf(buf,buf_len,"SET_DRUM %d\n",-drum_speed * DR_MULT);
                pw(write(controller,buf,strlen(buf)));
+
+               /*
+               snprintf(buf,buf_len,"echo -ne \"SET_DRUM %d\\n\"", -drum_speed * DR_MULT);
+               system(buf);
+               */
 
                break;
             }
