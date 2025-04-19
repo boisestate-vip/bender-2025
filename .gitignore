@@ -15,6 +15,7 @@
 *.exe
 *.out
 *.app
+*.e
 
 # anything in the bin 
 bin
