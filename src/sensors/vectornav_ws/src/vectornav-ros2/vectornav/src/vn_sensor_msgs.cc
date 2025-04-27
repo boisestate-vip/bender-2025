@@ -7,6 +7,9 @@
  * https://opensource.org/licenses/MIT.
  */
 
+/* modified by qeftser for use in Lunabotics 2025 */
+#define DISABLE_EARTH 1
+
 #include <chrono>
 #include <functional>
 #include <memory>
@@ -56,22 +59,34 @@ public:
     // TODO(Dereck): Only publish if data is available from the sensor?
     pub_time_startup_ =
       this->create_publisher<sensor_msgs::msg::TimeReference>("vectornav/time_startup", 10);
+#if ! DISABLE_EARTH
     pub_time_gps_ =
       this->create_publisher<sensor_msgs::msg::TimeReference>("vectornav/time_gps", 10);
+#endif
     pub_time_syncin_ =
       this->create_publisher<sensor_msgs::msg::TimeReference>("vectornav/time_syncin", 10);
+#if ! DISABLE_EARTH
     pub_time_pps_ =
       this->create_publisher<sensor_msgs::msg::TimeReference>("vectornav/time_pps", 10);
+#endif
     pub_imu_ = this->create_publisher<sensor_msgs::msg::Imu>("vectornav/imu", 10);
+#if ! DISABLE_EARTH
     pub_gnss_ = this->create_publisher<sensor_msgs::msg::NavSatFix>("vectornav/gnss", 10);
+#endif
     pub_imu_uncompensated_ =
       this->create_publisher<sensor_msgs::msg::Imu>("vectornav/imu_uncompensated", 10);
+#if ! DISABLE_EARTH
     pub_magnetic_ =
       this->create_publisher<sensor_msgs::msg::MagneticField>("vectornav/magnetic", 10);
+#endif
+#if ! DISABLE_EARTH
     pub_temperature_ =
       this->create_publisher<sensor_msgs::msg::Temperature>("vectornav/temperature", 10);
+#endif
+#if ! DISABLE_EARTH
     pub_pressure_ =
       this->create_publisher<sensor_msgs::msg::FluidPressure>("vectornav/pressure", 10);
+#endif
     pub_velocity_ = this->create_publisher<geometry_msgs::msg::TwistWithCovarianceStamped>(
       "vectornav/velocity_body", 10);
     pub_pose_ =
@@ -92,9 +107,11 @@ public:
     sub_vn_imu_ = this->create_subscription<vectornav_msgs::msg::ImuGroup>(
       "vectornav/raw/imu", 10, sub_vn_imu_cb);
 
+#if ! DISABLE_EARTH
     auto sub_vn_gps_cb = std::bind(&VnSensorMsgs::sub_vn_gps, this, std::placeholders::_1);
     sub_vn_gps_ = this->create_subscription<vectornav_msgs::msg::GpsGroup>(
       "vectornav/raw/gps", 10, sub_vn_gps_cb);
+#endif
 
     auto sub_vn_attitude_cb =
       std::bind(&VnSensorMsgs::sub_vn_attitude, this, std::placeholders::_1);
@@ -105,9 +122,11 @@ public:
     sub_vn_ins_ = this->create_subscription<vectornav_msgs::msg::InsGroup>(
       "vectornav/raw/ins", 10, sub_vn_ins_cb);
 
+#if ! DISABLE_EARTH
     auto sub_vn_gps2_cb = std::bind(&VnSensorMsgs::sub_vn_gps2, this, std::placeholders::_1);
     sub_vn_gps2_ = this->create_subscription<vectornav_msgs::msg::GpsGroup>(
       "vectornav/raw/gps2", 10, sub_vn_gps2_cb);
+#endif
 
     //enu frame option
     use_enu = get_parameter("use_enu").as_bool();
@@ -170,7 +189,9 @@ private:
 
       msg.source = "gps";
 
+#if ! DISABLE_EARTH
       pub_time_gps_->publish(msg);
+#endif
     }
 
     // Time Reference (SyncIn)
@@ -196,7 +217,9 @@ private:
 
       msg.source = "pps";
 
+#if ! DISABLE_EARTH
       pub_time_pps_->publish(msg);
+#endif
     }
 
     // IMU
@@ -252,7 +275,9 @@ private:
 
       fill_covariance_from_param("magnetic_covariance", msg.magnetic_field_covariance);
 
+#if ! DISABLE_EARTH
       pub_magnetic_->publish(msg);
+#endif
     }
 
     // Temperature
@@ -261,7 +286,9 @@ private:
       msg.header = msg_in->header;
       msg.temperature = msg_in->magpres_temp;
 
+#if ! DISABLE_EARTH
       pub_temperature_->publish(msg);
+#endif
     }
 
     // Pressure
@@ -272,7 +299,9 @@ private:
       // Convert kPa to Pa
       msg.fluid_pressure = msg_in->magpres_pres * 1e3;
 
+#if ! DISABLE_EARTH
       pub_pressure_->publish(msg);
+#endif
     }
 
     // GNSS
@@ -299,7 +328,9 @@ private:
 
       msg.position_covariance_type = sensor_msgs::msg::NavSatFix::COVARIANCE_TYPE_DIAGONAL_KNOWN;
 
+#if ! DISABLE_EARTH
       pub_gnss_->publish(msg);
+#endif
     }
 
     // Velocity
@@ -429,15 +460,27 @@ private:
 
   /// Publishers
   rclcpp::Publisher<sensor_msgs::msg::TimeReference>::SharedPtr pub_time_startup_;
+#if ! DISABLE_EARTH
   rclcpp::Publisher<sensor_msgs::msg::TimeReference>::SharedPtr pub_time_gps_;
+#endif
   rclcpp::Publisher<sensor_msgs::msg::TimeReference>::SharedPtr pub_time_syncin_;
+#if ! DISABLE_EARTH
   rclcpp::Publisher<sensor_msgs::msg::TimeReference>::SharedPtr pub_time_pps_;
+#endif
   rclcpp::Publisher<sensor_msgs::msg::Imu>::SharedPtr pub_imu_;
+#if ! DISABLE_EARTH
   rclcpp::Publisher<sensor_msgs::msg::NavSatFix>::SharedPtr pub_gnss_;
+#endif
   rclcpp::Publisher<sensor_msgs::msg::Imu>::SharedPtr pub_imu_uncompensated_;
+#if ! DISABLE_EARTH
   rclcpp::Publisher<sensor_msgs::msg::MagneticField>::SharedPtr pub_magnetic_;
+#endif
+#if ! DISABLE_EARTH
   rclcpp::Publisher<sensor_msgs::msg::Temperature>::SharedPtr pub_temperature_;
+#endif
+#if ! DISABLE_EARTH
   rclcpp::Publisher<sensor_msgs::msg::FluidPressure>::SharedPtr pub_pressure_;
+#endif
   rclcpp::Publisher<geometry_msgs::msg::TwistWithCovarianceStamped>::SharedPtr pub_velocity_;
   rclcpp::Publisher<geometry_msgs::msg::PoseWithCovarianceStamped>::SharedPtr pub_pose_;
 
@@ -445,10 +488,14 @@ private:
   rclcpp::Subscription<vectornav_msgs::msg::CommonGroup>::SharedPtr sub_vn_common_;
   rclcpp::Subscription<vectornav_msgs::msg::TimeGroup>::SharedPtr sub_vn_time_;
   rclcpp::Subscription<vectornav_msgs::msg::ImuGroup>::SharedPtr sub_vn_imu_;
+#if ! DISABLE_EARTH
   rclcpp::Subscription<vectornav_msgs::msg::GpsGroup>::SharedPtr sub_vn_gps_;
+#endif
   rclcpp::Subscription<vectornav_msgs::msg::AttitudeGroup>::SharedPtr sub_vn_attitude_;
   rclcpp::Subscription<vectornav_msgs::msg::InsGroup>::SharedPtr sub_vn_ins_;
+#if ! DISABLE_EARTH
   rclcpp::Subscription<vectornav_msgs::msg::GpsGroup>::SharedPtr sub_vn_gps2_;
+#endif
 
   bool use_enu = true;
 

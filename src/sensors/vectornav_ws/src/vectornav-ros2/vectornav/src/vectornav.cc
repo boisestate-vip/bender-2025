@@ -7,6 +7,9 @@
  * https://opensource.org/licenses/MIT.
  */
 
+/* modified by qeftser for use in Lunabotics 2025 */
+#define DISABLE_EARTH 1
+
 #include <chrono>
 #include <functional>
 #include <memory>
@@ -165,21 +168,27 @@ public:
     pub_common_ = this->create_publisher<vectornav_msgs::msg::CommonGroup>("vectornav/raw/common", 10);
     pub_time_ = this->create_publisher<vectornav_msgs::msg::TimeGroup>("vectornav/raw/time", 10);
     pub_imu_ = this->create_publisher<vectornav_msgs::msg::ImuGroup>("vectornav/raw/imu", 10);
+#if ! DISABLE_EARTH
     pub_gps_ = this->create_publisher<vectornav_msgs::msg::GpsGroup>("vectornav/raw/gps", 10);
+#endif
     pub_attitude_ = this->create_publisher<vectornav_msgs::msg::AttitudeGroup>("vectornav/raw/attitude", 10);
     pub_ins_ = this->create_publisher<vectornav_msgs::msg::InsGroup>("vectornav/raw/ins", 10);
+#if ! DISABLE_EARTH
     pub_gps2_ = this->create_publisher<vectornav_msgs::msg::GpsGroup>("vectornav/raw/gps2", 10);
+#endif
 
     sub_vel_aiding_ = this->create_subscription<geometry_msgs::msg::Twist>(
       "vectornav/velocity_aiding", 1, std::bind(&Vectornav::vel_aiding_cb, this, _1));
 
     // magnetic cal action
+#if ! DISABLE_EARTH
     server_mag_cal_ = rclcpp_action::create_server<MagCal>(
       this, "vectornav/mag_cal",
       std::bind(&Vectornav::handle_cal_goal, this, _1, _2),
       std::bind(&Vectornav::handle_cal_cancel, this, _1),
       std::bind(&Vectornav::handle_cal_accept, this, _1)
     );
+#endif
 
     if (!optimize_serial_communication(port)) {
       RCLCPP_WARN(get_logger(), "time of message delivery may be compromised!");
@@ -1105,7 +1114,9 @@ private:
     }
 
     // Publish
+#if ! DISABLE_EARTH
     node->pub_gps_->publish(msg);
+#endif
   }
 
   /** Copy Attitude Group fields in binary packet to a CompositeData message
@@ -1320,7 +1331,9 @@ private:
     // }
 
     // Publish
+#if ! DISABLE_EARTH
     node->pub_gps2_->publish(msg);
+#endif
   }
 
   //
@@ -1470,16 +1483,22 @@ private:
   rclcpp::Publisher<vectornav_msgs::msg::CommonGroup>::SharedPtr pub_common_;
   rclcpp::Publisher<vectornav_msgs::msg::TimeGroup>::SharedPtr pub_time_;
   rclcpp::Publisher<vectornav_msgs::msg::ImuGroup>::SharedPtr pub_imu_;
+#if ! DISABLE_EARTH
   rclcpp::Publisher<vectornav_msgs::msg::GpsGroup>::SharedPtr pub_gps_;
+#endif
   rclcpp::Publisher<vectornav_msgs::msg::AttitudeGroup>::SharedPtr pub_attitude_;
   rclcpp::Publisher<vectornav_msgs::msg::InsGroup>::SharedPtr pub_ins_;
+#if ! DISABLE_EARTH
   rclcpp::Publisher<vectornav_msgs::msg::GpsGroup>::SharedPtr pub_gps2_;
+#endif
 
   // Subscriptions
   rclcpp::Subscription<geometry_msgs::msg::Twist>::SharedPtr sub_vel_aiding_;
 
   /// Action servers for calibration
+#if ! DISABLE_EARTH
   rclcpp_action::Server<vectornav_msgs::action::MagCal>::SharedPtr server_mag_cal_;
+#endif
   std::thread action_thread_;
 
   /// ROS header time stamp adjustments
