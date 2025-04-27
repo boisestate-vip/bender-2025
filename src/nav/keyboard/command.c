@@ -239,7 +239,7 @@ int main(int argc, char ** argv) {
                snprintf(buf,buf_len,"GET_ARM\n");
                pw(write(controller,buf,strlen(buf)));
                get_response(controller,1,&curr);
-               int next = curr + 100 * AR_MULT;
+               int next = curr + 10 * AR_MULT;
                snprintf(buf,buf_len,"SET_ARM %d\n",next);
                pw(write(controller,buf,strlen(buf)));
 
@@ -257,7 +257,7 @@ int main(int argc, char ** argv) {
                snprintf(buf,buf_len,"GET_ARM\n");
                pw(write(controller,buf,strlen(buf)));
                get_response(controller,1,&curr);
-               int next = curr - 100 * AR_MULT;
+               int next = curr - 10 * AR_MULT;
                snprintf(buf,buf_len,"SET_ARM %d\n",next);
                pw(write(controller,buf,strlen(buf)));
 
