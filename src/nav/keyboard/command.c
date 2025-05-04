@@ -338,6 +338,35 @@ int main(int argc, char ** argv) {
                pw(write(motor0,buf,strlen(buf)));
                pw(write(motor1,buf,strlen(buf)));
 
+               printf("\033[2J\033[H\n");
+               printf("Reboot started - waiting 20s\n");
+
+               close(motor0);
+               close(motor1);
+
+               for (int i = 0; i < 20; ++i) {
+                  sleep(1);
+                  printf("\033[2J\033[H\n");
+                  printf("Rebooting - waiting %ds\n",19 - i);
+               }
+
+               motor0 = open(argv[1],O_RDWR | O_NOCTTY);
+               if (errno != 0) {
+                  printf("\033[31mconnection failed!\033[0m\n");
+                  perror("open");
+                  exit(1);
+               }
+
+               motor1 = open(argv[2],O_RDWR | O_NOCTTY);
+               if (errno != 0) {
+                  printf("\033[31mconnection failed!\033[0m\n");
+                  perror("open");
+                  exit(1);
+               }
+
+               printf("\033[2J\033[H\n");
+               printf("Reboot finished\n");
+
                break;
             }
          case ' ':
