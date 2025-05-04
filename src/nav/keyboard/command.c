@@ -166,7 +166,8 @@ int main(int argc, char ** argv) {
    }
 
    double motor_speed = 5;
-   int drum_speed = 20;
+   int drum_speed = 150;
+   int step_speed = 25;
    int steps = 0;
    int count;
 
@@ -222,19 +223,20 @@ int main(int argc, char ** argv) {
          case 'i':
             {
                motor_speed += 1;
-               printf("m\033[2J\033[Hotor speed is now %f\n",motor_speed);
+               printf("m\033[2J\033[H motor speed is now %f\n",motor_speed);
 
                break;
             }
          case 'o':
             {
                motor_speed -= 1;
-               printf("\033[2J\033[Hmotor speed is now %f\n",motor_speed);
+               printf("\033[2J\033[H motor speed is now %f\n",motor_speed);
 
                break;
             }
          case 'r':
             {
+               /*
                double curr;
                snprintf(buf,buf_len,"GET_ARM\n");
                pw(write(controller,buf,strlen(buf)));
@@ -242,17 +244,17 @@ int main(int argc, char ** argv) {
                int next = curr + 10 * AR_MULT;
                snprintf(buf,buf_len,"SET_ARM %d\n",next);
                pw(write(controller,buf,strlen(buf)));
+               */
 
-               /*
-               steps += 100 * AR_MULT;
+               steps += step_speed * AR_MULT;
                snprintf(buf,buf_len,"SET_ARM %d\n",steps);
                pw(write(controller,buf,strlen(buf)));
-               */
 
                break;
             }
          case 'f':
             {
+               /*
                double curr;
                snprintf(buf,buf_len,"GET_ARM\n");
                pw(write(controller,buf,strlen(buf)));
@@ -260,12 +262,11 @@ int main(int argc, char ** argv) {
                int next = curr - 10 * AR_MULT;
                snprintf(buf,buf_len,"SET_ARM %d\n",next);
                pw(write(controller,buf,strlen(buf)));
+               */
 
-               /*
-               steps -= 100 * AR_MULT;
+               steps -= step_speed * AR_MULT;
                snprintf(buf,buf_len,"SET_ARM %d\n",steps);
                pw(write(controller,buf,strlen(buf)));
-               */
 
                break;
             }
@@ -308,7 +309,7 @@ int main(int argc, char ** argv) {
             }
          case 'p':
             {
-               printf("\033[2J\033[H");
+               printf("\033[2J\033[H\n");
                snprintf(buf,buf_len,"STATUS\n");
                pw(write(controller,buf,strlen(buf)));
                print_response(controller);
@@ -321,6 +322,13 @@ int main(int argc, char ** argv) {
                get_response(motor1,2,motors);
                printf("Motor 1: [ pos: %lf, vel: %lf ]\n",motors[0],motors[1]);
             }
+         case ' ':
+            {
+               if (!drum_spinning) {
+                  snprintf(buf,buf_len,"SET_DRUM 0\n");
+                  pw(write(controller,buf,strlen(buf)));
+               }
+            }
          default:
             {
                snprintf(buf,buf_len,"v 0 0\n");
@@ -330,13 +338,6 @@ int main(int argc, char ** argv) {
                break;
             }
       }
-
-      /*
-      if (!drum_spinning) {
-         snprintf(buf,buf_len,"SET_DRUM 0\n");
-         pw(write(controller,buf,strlen(buf)));
-      }
-      */
 
    }
 
