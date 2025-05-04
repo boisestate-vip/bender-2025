@@ -321,6 +321,24 @@ int main(int argc, char ** argv) {
                pw(write(motor1,buf,strlen(buf)));
                get_response(motor1,2,motors);
                printf("Motor 1: [ pos: %lf, vel: %lf ]\n",motors[0],motors[1]);
+
+               break;
+            }
+         case 'c':
+            {
+               snprintf(buf,buf_len,"sc\n");
+               pw(write(motor0,buf,strlen(buf)));
+               pw(write(motor1,buf,strlen(buf)));
+
+               break;
+            }
+         case 'x':
+            {
+               snprintf(buf,buf_len,"sr\n");
+               pw(write(motor0,buf,strlen(buf)));
+               pw(write(motor1,buf,strlen(buf)));
+
+               break;
             }
          case ' ':
             {
