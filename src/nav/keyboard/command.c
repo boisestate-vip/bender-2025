@@ -132,14 +132,25 @@ int main(int argc, char ** argv) {
 #ifdef INVERTAR
    printf("\033[36mCompiled with Arm inverted\033[0m\n");
 #endif
+#ifdef NOARM
+   printf("\033[36mCompiled with Arm Disabled\033[0m\n");
+#endif
 
    /* get serial inputs to use during runtime */
 
+#ifndef NOARM
    if (argc != 4) {
       printf("usage:\n%s [odrive0] [odrive1] [motor_controller]\n",argv[0]);
       printf("please pass serial bindings for all these values\n");
       exit(1);
    }
+#else
+   if (argc != 3) {
+      printf("usage:\n%s [odrive0] [odrive1]\n",argv[0]);
+      printf("please pass serial bindings for all these values\n");
+      exit(1);
+   }
+#endif
 
    printf("connecting to motor0 at %s\n",argv[1]);
    int motor0 = open(argv[1],O_RDWR | O_NOCTTY);
@@ -157,6 +168,7 @@ int main(int argc, char ** argv) {
       exit(1);
    }
 
+#ifndef NOARM
    printf("connecting to controller at %s\n",argv[3]);
    int controller = open(argv[3],O_RDWR | O_NOCTTY);
    if (errno != 0) {
@@ -164,6 +176,7 @@ int main(int argc, char ** argv) {
       perror("open");
       exit(1);
    }
+#endif
 
    double motor_speed = 5;
    int drum_speed = 150;
@@ -236,6 +249,7 @@ int main(int argc, char ** argv) {
             }
          case 'r':
             {
+#ifndef NOARM
                /*
                double curr;
                snprintf(buf,buf_len,"GET_ARM\n");
@@ -249,11 +263,13 @@ int main(int argc, char ** argv) {
                steps += step_speed * AR_MULT;
                snprintf(buf,buf_len,"SET_ARM %d\n",steps);
                pw(write(controller,buf,strlen(buf)));
+#endif
 
                break;
             }
          case 'f':
             {
+#ifndef NOARM
                /*
                double curr;
                snprintf(buf,buf_len,"GET_ARM\n");
@@ -281,10 +297,12 @@ int main(int argc, char ** argv) {
                system(buf);
                */
 
+#endif
                break;
             }
          case 'e':
             {
+#ifndef NOARM
                drum_spinning = 1;
                snprintf(buf,buf_len,"SET_DRUM %d\n",-drum_speed * DR_MULT);
                pw(write(controller,buf,strlen(buf)));
@@ -294,6 +312,7 @@ int main(int argc, char ** argv) {
                system(buf);
                */
 
+#endif
                break;
             }
          case 'k':
@@ -310,9 +329,11 @@ int main(int argc, char ** argv) {
          case 'p':
             {
                printf("\033[2J\033[H\n");
+#ifndef NOARM
                snprintf(buf,buf_len,"STATUS\n");
                pw(write(controller,buf,strlen(buf)));
                print_response(controller);
+#endif
                double motors[2];
                snprintf(buf,buf_len,"f 0\n");
                pw(write(motor0,buf,strlen(buf)));
@@ -371,10 +392,12 @@ int main(int argc, char ** argv) {
             }
          case ' ':
             {
+#ifndef NOARM
                if (!drum_spinning) {
                   snprintf(buf,buf_len,"SET_DRUM 0\n");
                   pw(write(controller,buf,strlen(buf)));
                }
+#endif
             }
          default:
             {
@@ -392,7 +415,9 @@ cleanup:
 
    close(motor0);
    close(motor1);
+#ifndef NOARM
    close(controller);
+#endif
 
    return 0;
 }
