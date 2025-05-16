@@ -49,11 +49,7 @@ struct f710_status {
    int8_t start;
    int8_t back;
    int8_t dir;
-<<<<<<< HEAD
    int8_t y;
-=======
- t  int8_t y;
->>>>>>> 40fd567 (working keyboard setup)
    int8_t x;
    int8_t a;
    int8_t b;

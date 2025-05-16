@@ -111,7 +111,7 @@ void set_drum_speed(int teensy, int16_t speed);
 /* set the position of the arm */
 void set_arm_pos(int teensy, int16_t pos);
 /* get the position of the arm */
-uint16_t get_arm_pos(int teensy);
+int16_t get_arm_pos(int teensy);
 #define NANOSECONDS_PER_SECOND 1e9
 /* return the montotomic clock time in nanoseconds */
 clock_t CLOCK();
@@ -197,10 +197,11 @@ int main(int argc, char ** argv) {
       int res = select(controller+1,&read_set,NULL,NULL,&wait_max);
       //select(controller+1,&read_set,NULL,NULL,NULL);
 
-      if (res > 0)
-         read(controller,&raw_stat,8);
+      if (res > 0) {
+         read(controller,&raw_stat,8); 
 
-      update_status(raw_stat,&stat);
+         update_status(raw_stat,&stat);
+      }
 
       print_status(&stat);
 
@@ -251,11 +252,11 @@ int main(int argc, char ** argv) {
             }
 
             if (stat.rb) {
-               uint16_t pos = get_arm_pos(teensy);
+               int16_t pos = get_arm_pos(teensy);
                set_arm_pos(teensy,pos + arm_speed_scaler * AR_MULT);
             }
             else if (stat.rt) {
-               uint16_t pos = get_arm_pos(teensy);
+               int16_t pos = get_arm_pos(teensy);
                set_arm_pos(teensy,pos - arm_speed_scaler * AR_MULT);
             }
 
@@ -470,7 +471,7 @@ void set_arm_pos(int teensy, int16_t pos) {
    write(teensy,buf,strlen(buf));
 }
 
-uint16_t get_arm_pos(int teensy) {
+int16_t get_arm_pos(int teensy) {
 
    double pos;
 
@@ -478,6 +479,7 @@ uint16_t get_arm_pos(int teensy) {
    snprintf(buf,BUF_LEN,"GET_ARM\n");
    write(teensy,buf,strlen(buf));
    get_response(teensy,1,&pos);
+   printf("\033[32mrecieved %f\033[0m\n",pos);
 
    return (uint16_t)pos;
 }

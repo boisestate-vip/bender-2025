@@ -63,7 +63,13 @@ int main(int argc, char ** argv) {
       exit(1);
    }
 
-   long recved;
+   long recved = 0x7f7f7f7f00;
+   write(connfd,&recved,sizeof(long));
+   write(connfd,&recved,sizeof(long));
+   write(connfd,&recved,sizeof(long));
+   write(connfd,&recved,sizeof(long));
+   write(connfd,&recved,sizeof(long));
+   write(connfd,&recved,sizeof(long));
 
    while (!interrupted) {
 
