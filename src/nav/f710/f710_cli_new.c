@@ -163,11 +163,152 @@ int main(int argc, char ** argv) {
    write(connfd,&recved,sizeof(long));
    write(connfd,&recved,sizeof(long));
 
+   double track_speed_scaler = 1.0;
+   uint16_t drum_speed_scaler = 100;
+   uint16_t arm_speed_scaler = 10;
+   int16_t arm_pos;
+   int16_t drum_speed;
+
+   fd_set read_set;
+
+   struct f710_status stat;
+
+   clock_t last_clock = CLOCK();
+   double time_dist = 0.0;
+   double left_speed, right_speed;
+
+   struct timeval wait_max;
+
+   int tick_time = 0;
+
    while (!interrupted) {
 
-      read(controller,&recved,sizeof(long));
+      tick_time = 0;
 
-      write(connfd,&recved,sizeof(long));
+      FD_ZERO(&read_set);
+      FD_SET(controller,&read_set);
+      bzero(&wait_max,sizeof(wait_max));
+      wait_max.tv_sec = 0;
+      wait_max.tv_usec = (int)(POLL_RATE * 1e6);
+
+      int res = select(controller+1,&read_set,NULL,NULL,&wait_max);
+
+      if (res > 0) {
+
+         read(controller,&recved,sizeof(long));
+
+         write(connfd,&recved,sizeof(long));
+
+         update_status(recved,&stat);
+      }
+
+      printf("\033[2J\033[H");
+      printf("\033[31m!!! ESTIMATED VALUES ONLY !!!\033[0m\n\n");
+      printf("vibrate:          %s\n",stat.vibrate ? "ON" : "OFF");
+      printf("odrive max speed: %f\n",track_speed_scaler);
+      printf("drum speed:       %d\n",drum_speed_scaler);
+      printf("arm speed:        %d\n",arm_speed_scaler);
+      printf("arm pos:          %d\n",arm_pos);
+      printf("drum speed:       %d\n",drum_speed);
+      printf("odrive0 speed:    %f\n",left_speed * M0_MULT);
+      printf("odrive1 speed:    %f\n",right_speed * M1_MULT);
+
+      time_dist = (double)(CLOCK() - last_clock) / NANOSECONDS_PER_SECOND;
+      if (time_dist > POLL_RATE) {
+         last_clock = CLOCK();
+         tick_time = 1;
+      }
+
+      if (stat.mode) {
+         // TODO: add the mode brayden wanted 
+      }
+      else {
+
+         left_speed = track_speed_scaler * M0_MULT * (((double)(stat.lv_fr - 127) * -1) / 128.0);
+         right_speed = track_speed_scaler * M1_MULT * (((double)(stat.rv_fr - 127) * -1) / 128.0);
+
+         left_speed  = (fabs(left_speed)  < 0.1 * track_speed_scaler) ? 0.0 : left_speed;
+         right_speed = (fabs(right_speed) < 0.1 * track_speed_scaler) ? 0.0 : right_speed;
+
+         if (stat.a) {
+            left_speed = 0;
+            drum_speed = 0;
+         }
+         else if (stat.b) {
+            drum_speed = 0;
+         }
+
+         if (tick_time) {
+
+            if (stat.lb) {
+               drum_speed = drum_speed_scaler * DR_MULT;
+            }
+            else if (stat.lt) {
+               drum_speed = -drum_speed_scaler * DR_MULT;
+            }
+
+            if (stat.rb) {
+               arm_pos += arm_speed_scaler * AR_MULT;
+            }
+            else if (stat.rt) {
+               arm_pos -= arm_speed_scaler * AR_MULT;
+            }
+
+            if (stat.vibrate) {
+
+               switch (stat.dir) {
+
+                  case DIR_NORTH:
+
+                     track_speed_scaler += 1.0;
+                     track_speed_scaler 
+                        = (track_speed_scaler > MAX_TRACK_SPEED ? MAX_TRACK_SPEED : track_speed_scaler);
+
+                     break;
+                  case DIR_SOUTH:
+
+                     track_speed_scaler -= 1.0;
+                     track_speed_scaler 
+                        = (track_speed_scaler < 0.0 ? 0.0 : track_speed_scaler);
+
+                     break;
+                  case DIR_EAST:
+
+                     drum_speed_scaler += 10;
+                     drum_speed_scaler
+                        = (drum_speed_scaler > MAX_DRUM_SPEED ? MAX_DRUM_SPEED : drum_speed_scaler);
+
+                     break;
+                  case DIR_WEST:
+
+                     drum_speed_scaler -= 10;
+                     drum_speed_scaler
+                        = (drum_speed_scaler < 0 ? 0 : drum_speed_scaler);
+
+                     break;
+
+               }
+
+               if (stat.start) {
+
+                  arm_speed_scaler += 10;
+                  arm_speed_scaler
+                     = (arm_speed_scaler > MAX_ARM_SPEED ? MAX_ARM_SPEED : arm_speed_scaler);
+
+               }
+               else if (stat.back) {
+
+                  arm_speed_scaler -= 10;
+                  arm_speed_scaler
+                     = (arm_speed_scaler < 0 ? 0 : arm_speed_scaler);
+
+               }
+
+            }
+
+         }
+
+      }
 
    }
 
