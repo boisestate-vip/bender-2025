@@ -164,8 +164,8 @@ int main(int argc, char ** argv) {
    write(connfd,&recved,sizeof(long));
 
    double track_speed_scaler = 1.0;
-   uint16_t drum_speed_scaler = 100;
-   uint16_t arm_speed_scaler = 10;
+   int16_t drum_speed_scaler = 100;
+   int16_t arm_speed_scaler = 10;
    int16_t arm_pos;
    int16_t drum_speed;
 
@@ -219,8 +219,21 @@ int main(int argc, char ** argv) {
          tick_time = 1;
       }
 
-      if (stat.mode) {
-         // TODO: add the mode brayden wanted 
+      if (stat.mode && stat.vibrate) {
+
+         if (stat.y) {
+
+            printf("\033[2J\033[Hrebooting... (25s)\n");
+            sleep(1);
+            for (int i = 24; i != 0; --i) {
+
+               printf("\033[2J\033[Hrebooting... (%ds)\n",i);
+               sleep(1);
+
+            }
+
+         }
+
       }
       else {
 
