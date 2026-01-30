@@ -59,11 +59,11 @@ The implementation should follow the existing pattern used for `suggested_action
 
 ### Example Display Format
 ```
-📄 File: DSPIC33EP64GP504-E/PT.pdf [View]
+File: DSPIC33EP64GP504-E/PT.pdf [View]
 ```
 or
 ```
-🔗 DSPIC33EP64GP504-E/PT.pdf
+DSPIC33EP64GP504-E/PT.pdf [Link]
 ```
 
 ## Implementation Checklist
